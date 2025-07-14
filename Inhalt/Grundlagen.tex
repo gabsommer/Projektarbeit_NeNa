@@ -1,0 +1,29 @@
+\chapter{Theory}
+\label{chap:Theory}
+%
+\section{Statistical Mechanics}
+First we consider the system of the crystal of Neon Atoms as a canonical ensemble, this means it will be described under the assumption of an infinitely large heat bath by Boltzmann statistics. The probability distribution of members of the ensemble will then be 
+\begin{align}
+	p(\vec{\mathbf{q}},\vec{\mathbf{p}})=\frac{e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}}{\int\cdots\int e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}\mathrm{d}^{3N}\vec{\mathbf{q}}\mathrm{d}^{3N}\vec{\mathbf{p}}},
+\end{align}
+with $N$ being the number of particles.\\\\
+Now an ensemble is to be understood as many fictional copies of the same system representing the states that a system will explore when propagating in time according to Hamilton's equation of motion. The ensemble distribution represents the relative number of times that an ergodic system will come by a given state after an infinite amount of time has passed. Now for a crystal in principle this still holds. At low temperatures though the phase space that is being explored can be abstracted in such cases. The reason is that the system will for a given time usually explore only nearby points in the phase space. This is the crystal configuration but allowing for dynamics such as lattice vibrations and thermal movement of the atoms with respect to their lattice site. So for a given initial point in phase space the system will mostly explore its proximity until it probabilistically jumps to another volume of phase space whose proximity then will be explored for some further time. Now this means the systems lattice configuration has changed which at low but non zero temperature should be reasonable. 
+We now consider these volumes of phase space (being approximately confined regions, i.e. configurations of e.g. a crystalline structure) to be discrete states that the system can be in. So our canonical distribution now is a discrete one, each state representing such a configuration volume. What's left is to figure out what state of the still continuously possible states inside will be used to represent each configuration. We in this work will use the state $(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})$ that locally minimizes $H(\vec{\mathbf{q}},\vec{\mathbf{p}})$. Such a minimum can be found by employing a relaxation calculation in LAMMPS. The Boltzmann distribution now follows to be:
+\begin{align}
+	p(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})=\frac{e^{-\beta H(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})}}{\sum_{n} e^{-\beta H(\vec{\mathbf{q}}_{0n},\vec{\mathbf{p}}_{0n})}}.
+\end{align}
+
+grand canonical ensemble with two chemical components
+
+sub term of grand canonical ensemble with only ne1 and ne2
+\section{Relaxation in LAMMPS}
+relaxation theory form lammps 
+described in Bitzek, Koskinen, Gahler, Moseler, Gumbsch, Phys Rev Lett, 97, 170201 (2006)
+ 
+\section{Simulated Annealing}
+Molecular Dynamics simulation
+
+Hopefully explanation for cohesive energy
+
+
+%

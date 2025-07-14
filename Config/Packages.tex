@@ -1,0 +1,122 @@
+% Anpassung des Seitenlayouts 
+\usepackage[
+   automark, 					% Kapitelangaben in Kopfzeile automatisch erstellen
+   headsepline, 				% Trennlinie unter Kopfzeile
+   ilines 						% Trennlinie linksbündig ausrichten
+]{scrlayer-scrpage}
+%
+% Anpassung an Landessprache 
+%\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
+%
+% Encoding 
+%\usepackage{fontspec}
+%
+% Euro-Zeichen etc.
+\usepackage{textcomp}
+%
+% Subfigures
+\usepackage{subfigure}
+%
+% Wrapfigures
+\usepackage{wrapfig} 
+%
+% Mathe
+\usepackage[intlimits]{amsmath}
+\usepackage{amssymb}
+\usepackage{empheq}
+\usepackage{nicefrac}
+\usepackage{upgreek}
+\usepackage{siunitx}
+%
+% Index
+\usepackage{makeidx}
+%
+% Einfache Definition der Zeilenabsände und Seitenränder etc.
+\usepackage{setspace}
+\usepackage{geometry}
+%
+% Abkürzungsverzeichnis 
+\usepackage[printonlyused]{acronym}
+%
+% zum Umfliegen von Bildern 
+\usepackage{floatrow}
+%
+% einfachere Farbendefinition
+\usepackage[usenames,dvipsnames]{xcolor}
+%
+% Programmcode 
+\usepackage{listings}
+%
+% URL verlinken 
+\usepackage{url}
+%
+% PDF-Optionen 
+\usepackage[
+   bookmarks,
+   bookmarksopen=true,
+   %diese Farbdefinitionen zeichnen Links im PDF farblich aus (zum drucken auskommentieren)
+   colorlinks=true,
+   linkcolor=blue, 			% einfache interne Verknüpfungen
+   anchorcolor=black,			% Ankertext
+   citecolor=blue, 			% Verweise auf Literaturverzeichnis im Text
+   filecolor=magenta, 			% Verknüpfungen, die lokale Dateien öffnen
+   menucolor=red, 				% Acrobat-Menüpunkte
+   urlcolor=cyan,
+   %
+   plainpages=false, 			% zur korrekten Erstellung der Bookmarks
+   pdfpagelabels, 				% zur korrekten Erstellung der Bookmarks
+   hypertexnames=false, 		% zur korrekten Erstellung der Bookmarks
+   linktocpage 				% Seitenzahlen anstatt Text im Inhaltsverzeichnis verlinken
+]{hyperref}
+%
+% fortlaufendes Durchnummerieren der Fußnoten 
+\usepackage{chngcntr}
+%
+% Tabellen 
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{lscape}
+%
+% bei der Definition eigener Befehle benötigt
+\usepackage{ifthen}
+%
+% definiert u.a. die Befehle \todo und \listoftodos
+\usepackage{todonotes}
+%
+% römische Zahlen
+\usepackage{romannum}
+%
+% zum benutzen von toprule
+\usepackage{booktabs}
+%
+% Rahmen
+\usepackage{framed, color}
+\usepackage[most]{tcolorbox}
+%
+% Biblioraphie
+\usepackage{csquotes}
+\usepackage[style=numeric,sorting=none]{biblatex}
+%
+% Tikz
+\usepackage{color}
+\usepackage{transparent}
+\usepackage{pgfplots}
+%
+% Caption
+\usepackage{caption}
+%
+% Platz hinter Komma
+\usepackage{ziffer}
+%
+% Tabellen farben
+\usepackage{colortbl}
+\usepackage{hhline}
+%
+% package pgf plots
+\usepackage{pgfplots}
+%

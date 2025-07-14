@@ -1,0 +1,41 @@
+\appendix
+%
+\chapter{Anhang}
+\label{chap:Anhang}
+%
+\section{Inhalt des beigefügten Datenträgers}
+\label{sec:Inhalt des beigefügten Datenträgers}
+%
+\newcommand{\itemCustom}[1]{\item[] \includegraphics[height=\baselineskip]{Inhalt/Bilder/Icons/#1}~}
+\newcommand{\itemPDF}{\itemCustom{application-pdf}}
+\newcommand{\itemFolder}{\itemCustom{folder-yellow}}
+\newcommand{\itemDatei}{\itemCustom{Datei}}
+\newcommand{\itemDisc}{\itemCustom{media-optical}\texttt}
+%
+\begin{itemize}
+	\itemDisc \texttt{Datenträger}
+	\begin{itemize}
+		\itemFolder \texttt{A}
+		\begin{itemize}
+			\itemFolder \texttt{a}
+			\itemFolder \texttt{b}
+			\itemFolder \texttt{c}
+		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\itemFolder \texttt{B}
+		\begin{itemize}
+			\itemFolder \texttt{a}
+			\itemFolder \texttt{b}
+		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\itemPDF \texttt{A}
+	\end{itemize}
+\end{itemize}
+%
+\let\itemCustom\undefined
+\let\itemPDF\undefined
+\let\itemFolder\undefined
+\let\itemDisc\undefined
+%

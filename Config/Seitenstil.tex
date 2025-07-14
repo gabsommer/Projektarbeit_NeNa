@@ -1,0 +1,96 @@
+% Zeilenabstand 1,5 Zeilen 
+\onehalfspacing
+%
+% Seitenränder
+\setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
+\geometry{  paper=a4paper,
+            inner=35mm,
+            outer=30mm,
+            top=25mm,
+            bottom=25mm,
+            footskip=10mm,
+            includeheadfoot}
+%
+% Kopf- und Fußzeilen
+\pagestyle{scrheadings}
+%
+% Schriftform der Kopfzeile
+\renewcommand{\headfont}{\normalfont}
+%
+% Kopfzeile 
+\ihead{\large{\textsc{\textit{\headmark}}}}
+\chead{}
+\ohead{}
+%
+% Höhe der Kopfzeile bei Chapter Anfang (ist riesig ohne diesen Kommentar)
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-\topskip}}
+%
+% Programmcode Style
+\lstset{
+   basicstyle=\ttfamily\footnotesize,
+   identifierstyle=\color[rgb]{0,0,0},
+   keywordstyle=\color[rgb]{0,0,1},
+   stringstyle=\color[rgb]{0.56, 0.0, 1.0},
+   commentstyle=\color[rgb]{0.18, 0.61, 0.33},
+   columns=flexible,
+   tabsize=2,
+   extendedchars=true,
+   showspaces=false,
+   showstringspaces=false,
+   numbers=left,
+   numberstyle=\tiny,
+   breaklines=true,
+   backgroundcolor=\color[rgb]{0.9,0.9,0.9}}
+%
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35, 0.01}{\parbox{\textwidth}{\hspace{0pt}#1#2#3}}}
+\captionsetup[lstlisting]{
+    format=listing,
+    labelfont=white,
+    textfont=white,
+    singlelinecheck=false,
+    margin=0pt,
+    font={footnotesize},
+}
+%
+% KOMA Optionen
+\KOMAoptions{   
+    headwidth=textwithmarginpar:0pt,    % Kopfzeile über den Text hinaus verbreitern
+    headsepline=0.4pt}                  % Trennlinie unter Kopfzeile
+%
+% Fußzeile
+\ifoot{}
+\cfoot{\pagemark} % \pagemark in \ofoot schieben wenn gedruck werden soll
+\ofoot{}
+%
+% erzeugt ein wenig mehr Platz hinter einem Punkt
+\frenchspacing 
+%
+% Keine einzelnen Zeilen beim Anfang eines Abschnitts (Schusterjungen) 
+\clubpenalty = 10000
+%
+% Keine einzelnen Zeilen am Ende eines Abschnitts (Hurenkinder)
+\widowpenalty = 10000 \displaywidowpenalty = 10000
+%
+% Fußnoten fortlaufend durchnummerieren 
+\counterwithout{footnote}{chapter}
+%
+% Floating-Umgebungen anpassen %
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+%
+% Tiefe des Inhaltsverzeichniss
+\setcounter{tocdepth}{1}
+%
+% captions of tables on top
+\floatsetup[table]{capposition=top}
+%
+% pgf plot setup
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usepgfplotslibrary{patchplots}
+%
+% damti auch im Druck alles immer die gleichen Abstände hat
+\raggedbottom
+%
+%
