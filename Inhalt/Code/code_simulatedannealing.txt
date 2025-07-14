@@ -1,14 +1,16 @@
 stateVector = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 
-for i in N
+for i in N:
 	n = randomInt(1,len(stateVector))
-	stateVectorCopy = stateVector
-	flip(stateVector[n])
-	E1 = minimizeEnergy(stateVectorCopy)
-	E2 = minimizeEnergy(stateVector) 
-	if E2 <= E1
-		pass
-	if random(0,1)<=exp(-1/T*(E2-E1))
-		stateVector
+	
+	stateVectorOld = stateVector
+	stateVector[n] = 1 - stateVector[n]
+	
+	EOld = minimizeEnergy(stateVectorOld)
+	E = minimizeEnergy(stateVector) 
+	if E <= EOld:
+		stateVector = stateVectorOld
+	elif random(0,1)<=exp(-1/T*(E-EOld)):
+		stateVector = stateVectorNew
 	
 	

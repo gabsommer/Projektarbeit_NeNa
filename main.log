@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  14 JUL 2025 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  14 JUL 2025 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2084,7 +2084,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
 [3
 
-]) (Inhalt/Hauptteil.tex
+]
+(C:\Users\Gabriel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 31--31
+[][][][][][][] 
+ []
+
+(Inhalt/Code/code_simulatedannealing.txt)) (Inhalt/Hauptteil.tex
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
@@ -2119,16 +2127,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--45
 [5
 
 ]
-<Inhalt/Bilder/placeholder_image.png, id=199, 86.724pt x 86.724pt>
+<Inhalt/Bilder/placeholder_image.png, id=218, 86.724pt x 86.724pt>
 File: Inhalt/Bilder/placeholder_image.png Graphic file (type png)
 <use Inhalt/Bilder/placeholder_image.png>
 Package pdftex.def Info: Inhalt/Bilder/placeholder_image.png  used on input lin
 e 52.
 (pdftex.def)             Requested size: 123.77074pt x 123.77748pt.
 
-(C:\Users\Gabriel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-)
 Overfull \hbox (6.0pt too wide) in paragraph at lines 68--68
 [][][][][][][] 
  []
@@ -2202,13 +2207,13 @@ LaTeX Warning: Empty bibliography on input line 108.
 
 (Verzeichnisse/Anhang.tex
 chapter A.
-<Inhalt/Bilder/Icons/media-optical.pdf, id=239, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/media-optical.pdf, id=256, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/media-optical.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/media-optical.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/media-optical.pdf  used on input l
 ine 16.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/folder-yellow.pdf, id=240, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/folder-yellow.pdf, id=257, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/folder-yellow.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
@@ -2244,7 +2249,7 @@ File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
 ine 29.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/application-pdf.pdf, id=241, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/application-pdf.pdf, id=258, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/application-pdf.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/application-pdf.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/application-pdf.pdf  used on input
@@ -2289,10 +2294,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61570 strings out of 468221
- 1464250 string characters out of 5431923
- 2533512 words of memory out of 5000000
- 89080 multiletter control sequences out of 15000+600000
+ 61606 strings out of 468221
+ 1464935 string characters out of 5431923
+ 2575570 words of memory out of 5000000
+ 89097 multiletter control sequences out of 15000+600000
  642483 words of font info for 97 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,109p,10924b,2465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2320,9 +2325,9 @@ public/amsfonts/cm/cmti10.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Gabriel/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Gabriel/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (21 pages, 339547 bytes).
+Output written on main.pdf (21 pages, 348544 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  414 words of extra memory for PDF output out of 10000 (max. 10000000)
 
