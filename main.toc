@@ -8,26 +8,27 @@
 \contentsline {chapter}{\numberline {2}Aufgabenstellung}{2}{chapter.10}%
 \contentsline {chapter}{\numberline {3}Theory}{3}{chapter.11}%
 \contentsline {section}{\numberline {3.1}Statistical Mechanics}{3}{section.12}%
-\contentsline {section}{\numberline {3.2}Relaxation in LAMMPS}{4}{section.16}%
-\contentsline {section}{\numberline {3.3}Simulated Annealing}{4}{section.17}%
-\contentsline {chapter}{\numberline {4}Erstes Kapitel}{5}{chapter.36}%
-\contentsline {section}{\numberline {4.1}Einrichten dieser Vorlage}{5}{section.37}%
-\contentsline {section}{\numberline {4.2}Drucken}{5}{section.38}%
-\contentsline {section}{\numberline {4.3}Text}{5}{section.39}%
-\contentsline {section}{\numberline {4.4}Bilder}{6}{section.40}%
-\contentsline {section}{\numberline {4.5}Programmcode}{6}{section.42}%
-\contentsline {section}{\numberline {4.6}Tabellen}{6}{section.46}%
-\contentsline {section}{\numberline {4.7}Zitieren}{7}{section.48}%
-\contentsline {section}{\numberline {4.8}Abkürzung}{7}{section.49}%
-\contentsline {section}{\numberline {4.9}Aufzählungen}{7}{section.51}%
-\contentsline {section}{\numberline {4.10}Referenzieren}{8}{section.52}%
-\contentsline {section}{\numberline {4.11}Textstyle}{8}{section.53}%
-\contentsline {section}{\numberline {4.12}Formeln}{8}{section.54}%
-\contentsline {section}{\numberline {4.13}Sections}{8}{section.58}%
-\contentsline {subsection}{\numberline {4.13.1}subsection}{8}{subsection.59}%
-\contentsline {subsubsection}{\nonumberline subsubsection}{8}{subsubsection*.61}%
-\contentsline {chapter}{\numberline {5}Zweites Kapitel}{9}{chapter.62}%
-\contentsline {chapter}{\numberline {6}Ausblick}{10}{chapter.63}%
-\contentsline {chapter}{\numberline {A}Anhang}{i}{appendix.64}%
-\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{i}{section.65}%
+\contentsline {section}{\numberline {3.2}Relaxation in LAMMPS}{4}{section.17}%
+\contentsline {section}{\numberline {3.3}Simulated Annealing}{4}{section.18}%
+\contentsline {section}{\numberline {3.4}Symmetry optimization}{5}{section.44}%
+\contentsline {chapter}{\numberline {4}Erstes Kapitel}{6}{chapter.45}%
+\contentsline {section}{\numberline {4.1}Einrichten dieser Vorlage}{6}{section.46}%
+\contentsline {section}{\numberline {4.2}Drucken}{6}{section.47}%
+\contentsline {section}{\numberline {4.3}Text}{6}{section.48}%
+\contentsline {section}{\numberline {4.4}Bilder}{7}{section.49}%
+\contentsline {section}{\numberline {4.5}Programmcode}{7}{section.51}%
+\contentsline {section}{\numberline {4.6}Tabellen}{7}{section.55}%
+\contentsline {section}{\numberline {4.7}Zitieren}{8}{section.57}%
+\contentsline {section}{\numberline {4.8}Abkürzung}{8}{section.58}%
+\contentsline {section}{\numberline {4.9}Aufzählungen}{8}{section.60}%
+\contentsline {section}{\numberline {4.10}Referenzieren}{9}{section.61}%
+\contentsline {section}{\numberline {4.11}Textstyle}{9}{section.62}%
+\contentsline {section}{\numberline {4.12}Formeln}{9}{section.63}%
+\contentsline {section}{\numberline {4.13}Sections}{9}{section.67}%
+\contentsline {subsection}{\numberline {4.13.1}subsection}{9}{subsection.68}%
+\contentsline {subsubsection}{\nonumberline subsubsection}{9}{subsubsection*.70}%
+\contentsline {chapter}{\numberline {5}Zweites Kapitel}{10}{chapter.71}%
+\contentsline {chapter}{\numberline {6}Ausblick}{11}{chapter.72}%
+\contentsline {chapter}{\numberline {A}Anhang}{i}{appendix.73}%
+\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{i}{section.74}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

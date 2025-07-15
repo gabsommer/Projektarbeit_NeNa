@@ -13,6 +13,14 @@ We now consider these volumes of phase space (being approximately confined regio
 	p(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})=\frac{e^{-\beta H(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})}}{\sum_{n} e^{-\beta H(\vec{\mathbf{q}}_{0n},\vec{\mathbf{p}}_{0n})}}.
 \end{align}
 
+\begin{figure}
+	\centering
+	%trim = left bottom right top
+	\includegraphics[trim=3cm 18cm 6cm 1.5cm, clip,scale=0.7]{./Inhalt/Bilder/phasespace.png}
+	\caption{configurations volumes in phase space}
+	\label{fig:phasepsace}
+\end{figure}
+
 grand canonical ensemble with two chemical components
 
 sub term of grand canonical ensemble with only ne1 and ne2
@@ -21,14 +29,17 @@ relaxation theory form lammps
 described in Bitzek, Koskinen, Gahler, Moseler, Gumbsch, Phys Rev Lett, 97, 170201 (2006)
  
 \section{Simulated Annealing}
-The object that is being annealed is a state vector containing binary information for every lattice site. It refers to the ideal static lattice of the neon structure. A positive value or 1 refers to an atom being present in the initial structure and a negative value or 0 means the neon atom is vacant at this site. So every digit of the binary state refers to a certain specific lattice site. The energy functional of the annealing process will be the energy after minimazation (i.e. relaxation) of the above described state vector. This state vector therefore refers to an initial pre-relaxation configuration where sites are simply removed with \ac{LAMMPS}. 
-
+The object that is being annealed is a state vector containing binary information for every lattice site. It refers to the ideal static lattice of the neon structure. A positive value or 1 refers to an atom being present in the initial structure and a negative value or 0 means the neon atom is vacant at this site. So every digit of the binary state refers to a certain specific lattice site. The energy functional of the annealing process will be the energy after minimization (i.e. relaxation) of the above described state vector. This state vector therefore refers to an initial pre-relaxation configuration where sites are simply removed with \ac{LAMMPS}.
 \lstinputlisting[
 float=htpb,
 language=Python,
 label=lst:simannealing,
 caption={Simulated annealing algorithm},]
 {Inhalt/Code/code_simulatedannealing.txt}
+
+\section{Symmetry optimization} 
+In the case of a single sodium atom inserted in the neon crystalline structure the configurations of removed neon atoms the highly symmetrical structure was exploited to reduce redundant minimization calls in the annealing routine, by identifying symmetrically equivalent structures and caching them. By applying rotation and reflection matrices of the octahedral symmetry group to a single configuration, all equivalent configurations can quickly be created. By sorting them lexicographically and picking e.g. the first, one ensures every redundant set of configurations is always represented by the same configuration.
+
 
 
 
