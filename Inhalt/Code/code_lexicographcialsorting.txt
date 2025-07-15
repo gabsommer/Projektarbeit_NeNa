@@ -1,0 +1,8 @@
+equivs = np.transpose(np.einsum("klj,ij", oh_group, pos), (1, 0, 2))
+            
+for k in range(equivs.shape[0]):
+equivs[k] = equivs[k][np.lexsort(equivs[k].T[::-1])].copy()
+sorting_idx = np.lexsort(
+	np.transpose(equivs, (2, 1, 0)).reshape(pos.size, oh_group.shape[0])
+)
+pos = equivs[sorting_idx[0], :, :]

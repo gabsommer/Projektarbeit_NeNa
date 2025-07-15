@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  15 JUL 2025 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  15 JUL 2025 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2002,18 +2002,18 @@ ilder/TU_Logo.jpg>]) (Inhalt/Zusammenfassung.tex)
 
 [1
 
-] (main.toc)
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
-
+] (main.toc
 
 [1
 
 
 
 
-]
+])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
@@ -2080,7 +2080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-<./Inhalt/Bilder/phasespace.png, id=181, 597.23125pt x 845.1575pt>
+<./Inhalt/Bilder/phasespace.png, id=187, 597.23125pt x 845.1575pt>
 File: ./Inhalt/Bilder/phasespace.png Graphic file (type png)
 <use ./Inhalt/Bilder/phasespace.png>
 Package pdftex.def Info: ./Inhalt/Bilder/phasespace.png  used on input line 19.
@@ -2094,7 +2094,7 @@ Package pdftex.def Info: ./Inhalt/Bilder/phasespace.png  used on input line 19.
 (C:\Users\Gabriel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Overfull \hbox (6.0pt too wide) in paragraph at lines 38--38
+Overfull \hbox (6.0pt too wide) in paragraph at lines 43--43
 [][][][][][][] 
  []
 
@@ -2102,60 +2102,67 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 38--38
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 42.
+(Font)              using `OT1/cmr/m/it' instead on input line 44.
 
-[4 <./Inhalt/Bilder/phasespace.png>]) (Inhalt/Hauptteil.tex
+[4 <./Inhalt/Bilder/phasespace.png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 53--53
+[][][][][][][] 
+ []
+
+(Inhalt/Code/code_lexicographcialsorting.txt)) (Inhalt/Hauptteil.tex
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
 (Font)              using `OT1/cmr/m/it' instead on input line 1.
 
 [5]
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/it' instead on input line 1.
+
+[6]
 chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--15
+Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--15
+Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-2.
+5.
 (C:\Users\Gabriel\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--45
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
 
  []
 
 
 
-[6
+[7
 
 ]
-<Inhalt/Bilder/placeholder_image.png, id=238, 86.724pt x 86.724pt>
+<Inhalt/Bilder/placeholder_image.png, id=263, 86.724pt x 86.724pt>
 File: Inhalt/Bilder/placeholder_image.png Graphic file (type png)
 <use Inhalt/Bilder/placeholder_image.png>
 Package pdftex.def Info: Inhalt/Bilder/placeholder_image.png  used on input lin
-e 52.
+e 55.
 (pdftex.def)             Requested size: 123.77074pt x 123.77748pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.0pt too wide) in paragraph at lines 71--71
 [][][][][][][] 
  []
 
 (Inhalt/Code/code_placeholder.txt)
-
-LaTeX Warning: Citation 'bibkey' on page 7 undefined on input line 93.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--98
+Underfull \hbox (badness 10000) in paragraph at lines 96--101
 
  []
 
@@ -2163,18 +2170,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--98
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 98.
+(Font)              using `OT1/cmr/m/it' instead on input line 101.
 
-[7 <./Inhalt/Bilder/placeholder_image.png>]
+[8 <./Inhalt/Bilder/placeholder_image.png>]
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
-although it is yet undefined on input line 105.
+although it is yet undefined on input line 108.
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--112
 
  []
 
@@ -2182,15 +2189,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--109
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 137.
+(Font)              using `OT1/cmr/m/it' instead on input line 140.
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 157--164
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 160--167
 
  []
 
 
-Overfull \hbox (11.59334pt too wide) in paragraph at lines 157--164
+Overfull \hbox (11.59334pt too wide) in paragraph at lines 160--167
 \OT1/cmr/m/n/10.95 So wer-den Formeln im Text angegeben $\OML/cmm/m/it/10.95 x[
 ]$ \OT1/cmr/m/n/10.95 und so kann man im Text einen ^^?ubersichtlicheren
  []
@@ -2199,33 +2206,38 @@ Overfull \hbox (11.59334pt too wide) in paragraph at lines 157--164
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 174.
+(Font)              using `OT1/cmr/m/it' instead on input line 177.
 
-[9]
+[10]
 chapter 5.
 ) (Inhalt/Ausblick.tex
 
-[10
+[11
 
 ]
 chapter 6.
 )
 
-[11
+[12
 
 ]
-
-LaTeX Warning: Empty bibliography on input line 108.
-
+chapter without number
 (Verzeichnisse/Anhang.tex
+
+[1
+
+
+
+
+]
 chapter A.
-<Inhalt/Bilder/Icons/media-optical.pdf, id=276, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/media-optical.pdf, id=309, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/media-optical.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/media-optical.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/media-optical.pdf  used on input l
 ine 16.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/folder-yellow.pdf, id=277, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/folder-yellow.pdf, id=310, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/folder-yellow.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
@@ -2261,7 +2273,7 @@ File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
 ine 29.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/application-pdf.pdf, id=278, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/application-pdf.pdf, id=311, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/application-pdf.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/application-pdf.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/application-pdf.pdf  used on input
@@ -2269,10 +2281,7 @@ Package pdftex.def Info: Inhalt/Bilder/Icons/application-pdf.pdf  used on input
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
 ) (Sonstiges/Erklaerung.tex
 
-[1
-
-
-
+[2
 
  <./Inhalt/Bilder/Icons/media-optical.pdf> <./Inhalt/Bilder/Icons/folder-yellow
 .pdf
@@ -2283,9 +2292,13 @@ F inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./Inhalt/Bilder/Icons/application-pdf.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
->])
+>]
 
-[2
+[3
+
+])
+
+[4
 
 ] (main.aux)
  ***********
@@ -2306,13 +2319,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61628 strings out of 468221
- 1465363 string characters out of 5431923
- 2592641 words of memory out of 5000000
- 89109 multiletter control sequences out of 15000+600000
+ 61711 strings out of 468221
+ 1467186 string characters out of 5431923
+ 2632973 words of memory out of 5000000
+ 89168 multiletter control sequences out of 15000+600000
  642483 words of font info for 97 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,20n,109p,10924b,2465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,109p,10924b,2975s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Gabriel\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1095.pk><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type
@@ -2337,9 +2350,9 @@ public/amsfonts/cm/cmti10.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Gabriel/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Gabriel/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (22 pages, 376382 bytes).
+Output written on main.pdf (25 pages, 392749 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 433 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 590 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 449 words of extra memory for PDF output out of 10000 (max. 10000000)
 

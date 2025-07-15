@@ -1,23 +1,25 @@
 stateVector = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+alpha = (Tend / Tstart) ** (1 / N)
 
 for i in N:
-	alpha = (Tend / Tstart) ** (1 / N)
 	T = Tstart * (alpha**i)
-
 
 	n = randomInt(1,len(stateVector))
 	stateVector[n] = 1 - stateVector[n]
 	
 	stateVectorOld = stateVector
-	
 
 	EOld = minimizeEnergy(stateVectorOld)
 	E = minimizeEnergy(stateVector) 
-	
 	
 	if E >= EOld:
 		stateVector = stateVectorOld
 	elif random(0,1)<=exp(-1/T*(E-EOld)):
 		stateVector = stateVectorNew
+	
+S = 1
+for site in stateVector:
+	if site == 0:
+		S += 1
 	
 	
