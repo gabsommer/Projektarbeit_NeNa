@@ -8,8 +8,9 @@
 \contentsline {lstlisting}{\numberline {3.2}{\ignorespaces lexicographically sorting point group symmetries}}{6}{lstlisting.48}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {lstlisting}{\numberline {5.1}{\ignorespaces Code Placeholder}}{10}{lstlisting.68}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {lstlisting}{\numberline {7.1}{\ignorespaces Code Placeholder}}{11}{lstlisting.72}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

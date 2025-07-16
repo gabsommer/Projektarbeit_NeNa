@@ -14,24 +14,27 @@
 \contentsline {section}{\numberline {3.5}DFT optical spectra}{5}{section.57}%
 \contentsline {chapter}{\numberline {4}Neon interaction LAMMPS setup}{7}{chapter.58}%
 \contentsline {chapter}{\numberline {5}Finding Minima of neon replacements}{8}{chapter.59}%
-\contentsline {section}{\numberline {5.1}Einrichten dieser Vorlage}{8}{section.61}%
-\contentsline {section}{\numberline {5.2}Drucken}{9}{section.62}%
-\contentsline {section}{\numberline {5.3}Text}{9}{section.63}%
-\contentsline {section}{\numberline {5.4}Bilder}{9}{section.64}%
-\contentsline {section}{\numberline {5.5}Programmcode}{10}{section.66}%
-\contentsline {section}{\numberline {5.6}Tabellen}{10}{section.70}%
-\contentsline {section}{\numberline {5.7}Zitieren}{10}{section.72}%
-\contentsline {section}{\numberline {5.8}Abkürzung}{11}{section.73}%
-\contentsline {section}{\numberline {5.9}Aufzählungen}{11}{section.75}%
-\contentsline {section}{\numberline {5.10}Referenzieren}{11}{section.76}%
-\contentsline {section}{\numberline {5.11}Textstyle}{11}{section.77}%
-\contentsline {section}{\numberline {5.12}Formeln}{12}{section.78}%
-\contentsline {section}{\numberline {5.13}Sections}{12}{section.82}%
-\contentsline {subsection}{\numberline {5.13.1}subsection}{12}{subsection.83}%
-\contentsline {subsubsection}{\nonumberline subsubsection}{12}{subsubsection*.85}%
-\contentsline {chapter}{\numberline {6}Zweites Kapitel}{13}{chapter.86}%
-\contentsline {chapter}{\numberline {7}Ausblick}{14}{chapter.87}%
-\contentsline {chapter}{\nonumberline Bibliography}{i}{chapter*.88}%
-\contentsline {chapter}{\numberline {A}Anhang}{ii}{appendix.89}%
-\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{ii}{section.90}%
+\contentsline {section}{\numberline {5.1}Sodium Monomer}{8}{section.60}%
+\contentsline {section}{\numberline {5.2}Sodium Dimer}{8}{section.62}%
+\contentsline {chapter}{\numberline {6}DFT optical spectra results}{9}{chapter.63}%
+\contentsline {chapter}{\numberline {7}Erstes Kapitel}{10}{chapter.64}%
+\contentsline {section}{\numberline {7.1}Einrichten dieser Vorlage}{10}{section.65}%
+\contentsline {section}{\numberline {7.2}Drucken}{10}{section.66}%
+\contentsline {section}{\numberline {7.3}Text}{10}{section.67}%
+\contentsline {section}{\numberline {7.4}Bilder}{11}{section.68}%
+\contentsline {section}{\numberline {7.5}Programmcode}{11}{section.70}%
+\contentsline {section}{\numberline {7.6}Tabellen}{11}{section.74}%
+\contentsline {section}{\numberline {7.7}Zitieren}{12}{section.76}%
+\contentsline {section}{\numberline {7.8}Abkürzung}{12}{section.77}%
+\contentsline {section}{\numberline {7.9}Aufzählungen}{12}{section.79}%
+\contentsline {section}{\numberline {7.10}Referenzieren}{13}{section.80}%
+\contentsline {section}{\numberline {7.11}Textstyle}{13}{section.81}%
+\contentsline {section}{\numberline {7.12}Formeln}{13}{section.82}%
+\contentsline {section}{\numberline {7.13}Sections}{13}{section.86}%
+\contentsline {subsection}{\numberline {7.13.1}subsection}{13}{subsection.87}%
+\contentsline {subsubsection}{\nonumberline subsubsection}{13}{subsubsection*.89}%
+\contentsline {chapter}{\numberline {8}Ausblick}{14}{chapter.90}%
+\contentsline {chapter}{\nonumberline Bibliography}{i}{chapter*.91}%
+\contentsline {chapter}{\numberline {A}Anhang}{ii}{appendix.92}%
+\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{ii}{section.93}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
