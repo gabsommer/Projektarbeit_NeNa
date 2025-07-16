@@ -73,6 +73,34 @@
       \verb 10.1103/PhysRevLett.97.170201
       \endverb
     \endentry
+    \entry{griffithsQM}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{9781107189638}
+      \field{title}{Introduction to Quantum Mechanics}
+      \field{year}{2018}
+    \endentry
     \entry{bibkey}{article}{}{}
       \name{author}{3}{}{%
         {{hash=7ffef0b72a42d7dfe4899a61c5ca93cf}{%
@@ -102,8 +130,8 @@
       \strng{authornamehash}{205a30eabded0be5c958d0322beaaea6}
       \strng{authorfullhash}{205a30eabded0be5c958d0322beaaea6}
       \strng{authorfullhashraw}{205a30eabded0be5c958d0322beaaea6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal}
@@ -113,34 +141,6 @@
       \field{year}{2999}
       \field{pages}{195\bibrangedash 202}
       \range{pages}{8}
-    \endentry
-    \entry{griffithsQM}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=a00328547222c4a2a201442ee59dccfd}{%
-           family={Griffiths},
-           familyi={G\bibinitperiod},
-           given={David\bibnamedelima J.},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{fullhashraw}{a00328547222c4a2a201442ee59dccfd}
-      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
-      \strng{authorfullhashraw}{a00328547222c4a2a201442ee59dccfd}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{3}
-      \field{isbn}{9781107189638}
-      \field{title}{Introduction to Quantum Mechanics}
-      \field{year}{2018}
     \endentry
   \enddatalist
 \endrefsection
