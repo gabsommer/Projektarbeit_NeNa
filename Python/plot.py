@@ -39,7 +39,7 @@ ax1.set_title(f'Simulated Anealing ({len(data)} sweeps) of Sodium Monomer')
 
 ax2 = ax1.twinx()
 ax2.set_ylabel('Minimum Energies [eV]', color = "black", labelpad=10)
-ax2.plot(range(5,len(bruteforcedata)+5), bruteforcedata)
+ax2.plot(range(5,len(bruteforcedata)+5), bruteforcedata, color = "black", marker="x" )
 
 fig.tight_layout()
 plt.savefig("../Inhalt/Bilder/optimal_defect_simulated_annealing.png")
