@@ -30,10 +30,10 @@ frequencies = [data.count(num)/len(data) for num in unique_numbers]  # Count eac
 # Plot
 
 
-fig, ax1 = plt.subplots(figsize=(8, 5))
+fig, ax1 = plt.subplots(figsize=(10, 5))
 ax1.bar(unique_numbers,frequencies,color='gray', edgecolor='black', width=0.6)
 
-ax1.set_xlabel('Number of neon atoms removed')
+ax1.set_xlabel('Number S of neon atoms removed')
 ax1.set_ylabel('Relative Occurence')
 ax1.set_title(f'Simulated Anealing ({len(data)} sweeps) of Sodium Monomer')
 
@@ -43,3 +43,4 @@ ax2.plot(range(5,len(bruteforcedata)+5), bruteforcedata, color = "black", marker
 
 fig.tight_layout()
 plt.savefig("../Inhalt/Bilder/optimal_defect_simulated_annealing.png")
+print("Figure saved.")

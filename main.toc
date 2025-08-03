@@ -15,11 +15,11 @@
 \contentsline {chapter}{\numberline {4}Finding Minima of Neon Replacements}{7}{chapter.58}%
 \contentsline {section}{\numberline {4.1}Neon interaction LAMMPS setup}{7}{section.59}%
 \contentsline {section}{\numberline {4.2}Sodium Monomer}{7}{section.60}%
-\contentsline {section}{\numberline {4.3}Sodium Dimer}{8}{section.63}%
-\contentsline {chapter}{\numberline {5}DFT optical spectra results}{9}{chapter.65}%
-\contentsline {chapter}{\numberline {6}Conclusion}{10}{chapter.66}%
-\contentsline {chapter}{\numberline {7}Ausblick}{11}{chapter.67}%
-\contentsline {chapter}{\nonumberline Bibliography}{i}{chapter*.68}%
-\contentsline {chapter}{\numberline {A}Anhang}{ii}{appendix.69}%
-\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{ii}{section.70}%
+\contentsline {section}{\numberline {4.3}Sodium Dimer}{8}{section.62}%
+\contentsline {chapter}{\numberline {5}DFT optical spectra results}{9}{chapter.64}%
+\contentsline {chapter}{\numberline {6}Conclusion}{10}{chapter.65}%
+\contentsline {chapter}{\numberline {7}Ausblick}{11}{chapter.66}%
+\contentsline {chapter}{\nonumberline Bibliography}{i}{chapter*.67}%
+\contentsline {chapter}{\numberline {A}Anhang}{ii}{appendix.68}%
+\contentsline {section}{\numberline {A.1}Inhalt des beigefügten Datenträgers}{ii}{section.69}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

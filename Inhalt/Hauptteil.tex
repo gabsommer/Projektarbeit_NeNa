@@ -18,19 +18,21 @@
 -citation of paper that has the same plot
 Now first by brute force search we know the minima for a single sodium atom.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{./Inhalt/Bilder/optimal_defect_brute_force.png}
-	\caption{Brute force for single sodium atom}
-	\label{fig:bruteforcesodium}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[scale=0.5]{./Inhalt/Bilder/optimal_defect_brute_force.png}
+%	\caption{Brute force for single sodium atom}
+%	\label{fig:bruteforcesodium}
+%\end{figure}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{./Inhalt/Bilder/optimal_defect_simulated_annealing.png}
-	\caption{Simulated Annealing for single sodium atom}
+	\caption{Simulated Annealing for single sodium atom inserted, compared to a brute force minima search for a fixed number of removed atoms S.}
 	\label{fig:simulatedannealingsodium}
 \end{figure}  
+
+So \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately icks up on the location of the minima, albeit with no quantitative measure misleading local minima being blown out of proportion (See S=8).
 
 \section{Sodium Dimer}
 -3rd nearest neighbors, why ? because minima is more the 2 shells
