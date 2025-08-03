@@ -13,22 +13,33 @@ with open("S_mono.txt", "r") as file:
     data = [int(line.strip()) for line in lines]
 
 
-with open("./pickles/bf_results_1.0e-7_2l", "rb") as file:
+with open("./pickles/bf_results_1.0e-7_4l", "rb") as file:
     datapick = pickle.load(file)
-bruteforceplot = np.array([])
+bruteforcedata = np.array([])
 
-for i in range(11):
+for i in range(len(datapick)):
     S = i
-    energy = datapick[S-2]['neon_energies'].sum()+datapick[S-2]['sodium_energies'].sum()-2*ecoh*S
-    bruteforceplot = np.append(bruteforceplot,energy)
+    energy = datapick[i]['neon_energies'].sum() + datapick[i]['sodium_energies'].sum() - S*ecoh
+    bruteforcedata = np.append(bruteforcedata,energy)
+bruteforcedata = bruteforcedata[3:]
 
-print(bruteforceplot)
+
 
 unique_numbers = sorted(set(data))  # Find unique numbers
 frequencies = [data.count(num)/len(data) for num in unique_numbers]  # Count each number
 # Plot
-plt.bar(unique_numbers, frequencies,color='gray', edgecolor='black', width=0.6)
-plt.xlabel('Number of neon atoms removed')
-plt.ylabel('Relative Occurence')
-plt.title(f'Simulated Anealing ({len(data)} sweeps) of Sodium Monomer')
-#plt.show()
+
+
+fig, ax1 = plt.subplots(figsize=(8, 5))
+ax1.bar(unique_numbers,frequencies,color='gray', edgecolor='black', width=0.6)
+
+ax1.set_xlabel('Number of neon atoms removed')
+ax1.set_ylabel('Relative Occurence')
+ax1.set_title(f'Simulated Anealing ({len(data)} sweeps) of Sodium Monomer')
+
+ax2 = ax1.twinx()
+ax2.set_ylabel('Minimum Energies [eV]', color = "black", labelpad=10)
+ax2.plot(range(5,len(bruteforcedata)+5), bruteforcedata)
+
+fig.tight_layout()
+plt.savefig("../Inhalt/Bilder/optimal_defect_simulated_annealing.png")
