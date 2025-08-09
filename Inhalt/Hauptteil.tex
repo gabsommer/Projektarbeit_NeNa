@@ -2,6 +2,7 @@
 \chapter{Finding Minima of Neon Replacements}
 \label{chap:Erstes Kapitel}
 \section{Neon interaction LAMMPS setup}
+\subsection{\ac{HF} equations}
 We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a Hartree Fock self consitent field cycle by variyng the atom distance. Now selfconsitently solving the equations:\\
 \begin{align}
 	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}-\frac{e^2}{4\varepsilon_0}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi_{\mu\sigma}(\vec{r})=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
@@ -21,22 +22,32 @@ Since solving the \ac{HF} equations in real space is too costly one restricts th
 \begin{align}
 	\mathbf{F C}=\mathbf{S C} \epsilon,
 \end{align} 
-with $\epsilon$ being the vector of single particle energies, $\mathbf{S}$ the basis overlap matrix, $\mathbf{C}$ the coefficient matrix and finally $\mathbf{F}$ the Fock operator. Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
+
+with $\epsilon$ being a diagonal matrix of single particle energies on the diagonal, $\mathbf{S}$ the basis overlap matrix, $\mathbf{C}$ the coefficient matrix and finally $\mathbf{F}$ the Fock operator.
+\subsection{\ac{BSSE}}
+Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
 approximation to correct for the \ac{BSSE}.
 This is know as the counterpoise‐corrected interaction energy formula or Boys–Bernardi method: %TODO citation
 \begin{align}
 	E_{\text {int }}^{\text {CP }}(R)=E_{A B}(R)-E_A^{\text {ghost }}(R)-E_B^{\text {ghost }}(R).
 \end{align}
+\subsection{Moeller-Plesset Perturbation}
+-go form pair HF to moller plesset
+\subsection{Interpolation}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale = 0.7]{Inhalt/Bilder/pairpotential.png}
+	\caption{Plots of interpolations of pair potentials of Ne-Ne, Na-Na, Ne-Na calculated with Moeller Plesset 2 perturabtion theory.}
+\end{figure}
 %TODO Noltig source
-
+-explain exact interpolation\\
 -paper citation\\
-
--potential curves for na-ne, na-na, ne-ne interactions\\
 -which basisi is being used in the roothaan equations \\
 -explain setup of calculation with ball being carved out\\
 -maybe here explain the nearest neighbours\\
 lammps gets linear interpolation\\
-- since plot is in priniple linearly interpolated this is the exact pair interactins that lammps will read
+-since plot is in priniple linearly interpolated this is the exact pair interactins that lammps will read
 \section{Sodium Monomer}
 -Not feasible to brute force dimer with 3rd nearest neighbors\\
 -explain nearest neighbors\\

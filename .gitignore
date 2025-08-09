@@ -1,6 +1,8 @@
 # Compiled files
 *.dvi
 *.ps
+*.lol
+*.bcf
 
 # Intermediate files
 *.aux
