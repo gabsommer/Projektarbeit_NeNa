@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  3 AUG 2025 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  9 AUG 2025 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2117,54 +2117,70 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
 
 [6]
 chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+
+ []
+
 <./Inhalt/Bilder/optimal_defect_simulated_annealing.png, id=229, 722.7pt x 361.
 35pt>
 File: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png Graphic file (type
  png)
 <use ./Inhalt/Bilder/optimal_defect_simulated_annealing.png>
 Package pdftex.def Info: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png
-  used on input line 30.
+  used on input line 40.
 (pdftex.def)             Requested size: 361.3491pt x 180.67456pt.
 
 
 [7
 
- <./Inhalt/Bilder/optimal_defect_simulated_annealing.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 38--46
+]
+Underfull \hbox (badness 10000) in paragraph at lines 48--56
 
  []
 
-<Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png, id=236, 462.528pt 
+<Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png, id=238, 462.528pt 
 x 346.896pt>
 File: Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png Graphic file (
 type png)
 <use Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>
 Package pdftex.def Info: Inhalt/Bilder/optimal_defect_simulated_annealing_dimer
-.png  used on input line 49.
+.png  used on input line 59.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 54.
+(Font)              using `OT1/cmr/m/it' instead on input line 64.
 
-[8 <./Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>]
+[8 <./Inhalt/Bilder/optimal_defect_simulated_annealing.png>]
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/it' instead on input line 64.
+
+[9 <./Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>]
 chapter 5.
 
 
-[9
+[10
 
 ]
 chapter 6.
 ) (Inhalt/Ausblick.tex
 
-[10
+[11
 
 ]
 chapter 7.
 )
 
-[11
+[12
 
 ]
 chapter without number
@@ -2177,13 +2193,13 @@ chapter without number
 
 ]
 chapter A.
-<Inhalt/Bilder/Icons/media-optical.pdf, id=264, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/media-optical.pdf, id=271, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/media-optical.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/media-optical.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/media-optical.pdf  used on input l
 ine 16.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/folder-yellow.pdf, id=265, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/folder-yellow.pdf, id=272, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/folder-yellow.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
@@ -2219,7 +2235,7 @@ File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
 ine 29.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/application-pdf.pdf, id=266, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/application-pdf.pdf, id=273, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/application-pdf.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/application-pdf.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/application-pdf.pdf  used on input
@@ -2265,9 +2281,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61608 strings out of 468221
- 1465474 string characters out of 5431923
- 2632372 words of memory out of 5000000
+ 61610 strings out of 468221
+ 1465492 string characters out of 5431923
+ 2632373 words of memory out of 5000000
  89094 multiletter control sequences out of 15000+600000
  641848 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2290,14 +2306,17 @@ Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Gabriel/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/
 Gabriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmti10.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Gabriel/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (23 pages, 414901 bytes).
+/cmsy6.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmti10.pfb><C:/Users/Gabriel/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Gabriel/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Gabriel/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/Gabri
+el/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+>
+Output written on main.pdf (24 pages, 435212 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
+ 524 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 

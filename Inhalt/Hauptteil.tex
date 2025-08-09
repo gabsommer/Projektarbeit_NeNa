@@ -2,6 +2,20 @@
 \chapter{Finding Minima of Neon Replacements}
 \label{chap:Erstes Kapitel}
 \section{Neon interaction LAMMPS setup}
+We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a Hartree Fock self consitent field cycle by variyng the atom distance. Now selfconsitently solving the equations:\\
+\begin{align}
+	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}-\frac{e^2}{4\varepsilon_0}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi{\mu\sigma(\vec{r})}=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
+\end{align}
+with $\hat{A}_{\mu\sigma}$ being the exchange correlation term. 
+To get the energy of the whole system one needs to remove interelectron repulsion and correlation form the eigenenergies $\epsilon_{\mu\sigma}$:
+\begin{align}
+	
+\end{align}
+
+-hf scf formula\\
+-energy correction with ghost atoms\\
+-paper citation\\
+
 -potential curves for na-ne, na-na, ne-ne interactions\\
 -explain setup of calculation with ball being carved out\\
 -maybe here explain the nearest neighbours
