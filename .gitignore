@@ -1,0 +1,34 @@
+# Compiled files
+*.dvi
+*.ps
+
+# Intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Temporary editor files
+*.swp
+*.tmp
+*.bak
+*.backup
+*~
+
+# Latexmk specific
+*.nav
+*.snm
+*.vrb
+*.xdv
+
