@@ -4,21 +4,39 @@
 \section{Neon interaction LAMMPS setup}
 We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a Hartree Fock self consitent field cycle by variyng the atom distance. Now selfconsitently solving the equations:\\
 \begin{align}
-	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}-\frac{e^2}{4\varepsilon_0}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi{\mu\sigma(\vec{r})}=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
+	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}-\frac{e^2}{4\varepsilon_0}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi_{\mu\sigma}(\vec{r})=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
 \end{align}
-with $\hat{A}_{\mu\sigma}$ being the exchange correlation term. 
-To get the energy of the whole system one needs to remove interelectron repulsion and correlation form the eigenenergies $\epsilon_{\mu\sigma}$:
+with $\hat{A}_{\mu\sigma}$ being the exchange correlation term leads to the eigenenergies $\varepsilon_{\mu\sigma}$ Since \ac{HF} 
+minimizes a slater determinant, the energies correspond to the factors of the slater product state, meaning the systems energy is the sum of the energy of the single electrons. From that, to get the actual energy of the whole system, one needs to remove inter-electron repulsion and exchange correlation from the sum of all eigenenergies $\varepsilon_{\mu\sigma}$:
 \begin{align}
-	
+	E_{HF}^0 = \sum_{\mu,\sigma}\varepsilon_{\mu\sigma}-\frac{1}{2}\sum_{\substack{\mu,\nu\\\sigma,\sigma'}}^{(\mu\sigma\neq\nu\sigma)}\left[C_{\mu\sigma}^{\nu\sigma'}-A_{\mu\sigma}^{\nu\sigma}\delta_{\sigma\sigma'}\right]
 \end{align}
+with $C_{\mu\sigma}^{\nu\sigma'},A_{\mu\sigma}^{\nu\sigma}$ being defined as:
+\begin{align}
+	C_{\mu \sigma}^{v \sigma^{\prime}}&=\frac{e^2}{4 \pi \varepsilon_0} \iint  \frac{\left|\varphi_{\mu \sigma}(r)\right|^2\left|\varphi_{v \sigma^{\prime}}\left(r^{\prime}\right)\right|^2}{\left|r-r^{\prime}\right|}\mathrm{~d}^3 r \mathrm{~d}^3 r^{\prime},
+	\\
+	A_{\mu \sigma}^{v \sigma}&=\frac{e^2}{4 \pi \varepsilon_0} \iint \frac{\varphi_{\mu \sigma}^*(r) \varphi_{v \sigma}^*\left(r^{\prime}\right) \varphi_{\mu \sigma}\left(r^{\prime}\right) \varphi_{v \sigma}(r)}{\left|r-r^{\prime}\right|} \mathrm{~d}^3 r \mathrm{~d}^3 r^{\prime}.
+\end{align}
+Since solving the \ac{HF} equations in real space is too costly one restricts the variations to coefficients of a superposition of fixed basisvectors. These lead to the Roothaan-Hall equations, which are a discrete Matrix representation of the \ac{HF} equations:
+\begin{align}
+	\mathbf{F C}=\mathbf{S C} \epsilon,
+\end{align} 
+with $\epsilon$ being the vector of single particle energies, $\mathbf{S}$ the basis overlap matrix, $\mathbf{C}$ the coefficient matrix and finally $\mathbf{F}$ the Fock operator. Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
+approximation to correct for the \ac{BSSE}.
+This is know as the counterpoise‐corrected interaction energy formula or Boys–Bernardi method: %TODO citation
+\begin{align}
+	E_{\text {int }}^{\text {CP }}(R)=E_{A B}(R)-E_A^{\text {ghost }}(R)-E_B^{\text {ghost }}(R).
+\end{align}
+%TODO Noltig source
 
--hf scf formula\\
--energy correction with ghost atoms\\
 -paper citation\\
 
 -potential curves for na-ne, na-na, ne-ne interactions\\
+-which basisi is being used in the roothaan equations \\
 -explain setup of calculation with ball being carved out\\
--maybe here explain the nearest neighbours
+-maybe here explain the nearest neighbours\\
+lammps gets linear interpolation\\
+- since plot is in priniple linearly interpolated this is the exact pair interactins that lammps will read
 \section{Sodium Monomer}
 -Not feasible to brute force dimer with 3rd nearest neighbors\\
 -explain nearest neighbors\\

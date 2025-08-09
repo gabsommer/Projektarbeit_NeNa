@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  9 AUG 2025 11:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  9 AUG 2025 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2074,7 +2074,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-<./Inhalt/Bilder/phasespace.png, id=158, 597.23125pt x 845.1575pt>
+<./Inhalt/Bilder/phasespace.png, id=166, 597.23125pt x 845.1575pt>
 File: ./Inhalt/Bilder/phasespace.png Graphic file (type png)
 <use ./Inhalt/Bilder/phasespace.png>
 Package pdftex.def Info: ./Inhalt/Bilder/phasespace.png  used on input line 19.
@@ -2122,65 +2122,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
+Package acronym Info: Label `acro:HF' newly defined as it shall be overridden
+although it is yet undefined on input line 9.
+Package acronym Info: Label `acro:BSSE' newly defined as it shall be overridden
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
-
- []
-
-<./Inhalt/Bilder/optimal_defect_simulated_annealing.png, id=229, 722.7pt x 361.
-35pt>
-File: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png Graphic file (type
- png)
-<use ./Inhalt/Bilder/optimal_defect_simulated_annealing.png>
-Package pdftex.def Info: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png
-  used on input line 40.
-(pdftex.def)             Requested size: 361.3491pt x 180.67456pt.
+although it is yet undefined on input line 24.
 
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 48--56
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png, id=238, 462.528pt 
+<./Inhalt/Bilder/optimal_defect_simulated_annealing.png, id=254, 722.7pt x 361.
+35pt>
+File: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png Graphic file (type
+ png)
+<use ./Inhalt/Bilder/optimal_defect_simulated_annealing.png>
+Package pdftex.def Info: ./Inhalt/Bilder/optimal_defect_simulated_annealing.png
+  used on input line 62.
+(pdftex.def)             Requested size: 361.3491pt x 180.67456pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/it' instead on input line 69.
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+<Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png, id=261, 462.528pt 
 x 346.896pt>
 File: Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png Graphic file (
 type png)
 <use Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>
 Package pdftex.def Info: Inhalt/Bilder/optimal_defect_simulated_annealing_dimer
-.png  used on input line 59.
+.png  used on input line 81.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 64.
+(Font)              using `OT1/cmr/m/it' instead on input line 86.
 
-[8 <./Inhalt/Bilder/optimal_defect_simulated_annealing.png>]
+[9 <./Inhalt/Bilder/optimal_defect_simulated_annealing.png>]
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
-(Font)              using `OT1/cmr/m/it' instead on input line 64.
+(Font)              using `OT1/cmr/m/it' instead on input line 86.
 
-[9 <./Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>]
+[10 <./Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png>]
 chapter 5.
 
 
-[10
+[11
 
 ]
 chapter 6.
 ) (Inhalt/Ausblick.tex
 
-[11
+[12
 
 ]
 chapter 7.
 )
 
-[12
+[13
 
 ]
 chapter without number
@@ -2193,13 +2207,13 @@ chapter without number
 
 ]
 chapter A.
-<Inhalt/Bilder/Icons/media-optical.pdf, id=271, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/media-optical.pdf, id=294, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/media-optical.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/media-optical.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/media-optical.pdf  used on input l
 ine 16.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/folder-yellow.pdf, id=272, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/folder-yellow.pdf, id=295, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/folder-yellow.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
@@ -2235,7 +2249,7 @@ File: Inhalt/Bilder/Icons/folder-yellow.pdf Graphic file (type pdf)
 Package pdftex.def Info: Inhalt/Bilder/Icons/folder-yellow.pdf  used on input l
 ine 29.
 (pdftex.def)             Requested size: 16.49638pt x 16.49677pt.
-<Inhalt/Bilder/Icons/application-pdf.pdf, id=273, 48.18pt x 48.18pt>
+<Inhalt/Bilder/Icons/application-pdf.pdf, id=296, 48.18pt x 48.18pt>
 File: Inhalt/Bilder/Icons/application-pdf.pdf Graphic file (type pdf)
 <use Inhalt/Bilder/Icons/application-pdf.pdf>
 Package pdftex.def Info: Inhalt/Bilder/Icons/application-pdf.pdf  used on input
@@ -2281,10 +2295,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61610 strings out of 468221
- 1465492 string characters out of 5431923
- 2632373 words of memory out of 5000000
- 89094 multiletter control sequences out of 15000+600000
+ 61634 strings out of 468221
+ 1465747 string characters out of 5431923
+ 2632599 words of memory out of 5000000
+ 89108 multiletter control sequences out of 15000+600000
  641848 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,109p,10924b,2465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2314,9 +2328,9 @@ rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Gabriel/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/Gabri
 el/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on main.pdf (24 pages, 435212 bytes).
+Output written on main.pdf (25 pages, 447024 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  382 words of extra memory for PDF output out of 10000 (max. 10000000)
 
