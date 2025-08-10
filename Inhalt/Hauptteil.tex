@@ -29,9 +29,9 @@ with $\epsilon$ being a diagonal matrix of single particle energies on the diago
 \subsection{\ac{BSSE}}
 Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
 approximation to correct for the \ac{BSSE}.
-This is know as the counterpoise‐corrected interaction energy formula or Boys–Bernardi method: %TODO citation
+This is know as the counterpoise‐corrected interaction energy formula or Boys–Bernardi method: %TODO citation %TODO fix formula
 \begin{align}
-	E_{\text {int }}^{\text {CP }}(R)=E_{A B}(R)-E_A^{\text {ghost }}(R)-E_B^{\text {ghost }}(R).
+	E_{\text {int}}^{\text {CP}}(R)=E_{A B}(R)-E_A^{\text {ghost}}(R)-E_B^{\text {ghost}}(R).
 \end{align}
 
 \subsection{Interpolation}
@@ -50,7 +50,7 @@ This is know as the counterpoise‐corrected interaction energy formula or Boys�
 -maybe here explain the nearest neighbours\\
 lammps gets linear interpolation\\
 -since plot is in priniple linearly interpolated this is the exact pair interactins that lammps will read
-\section{Geometric \ac{LAMMPS} Setup}
+\section{Geometric LAMMPS Setup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TODO%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The simulation models a finite spherical cluster of atoms extracted from a bulk face-centered cubic lattice. To balance computational efficiency with physical realism, the system is partitioned into two concentric spherical regions defined in units of the lattice constant. The inner spherical region, with radius $n_{inner}$ contains atoms that are free to move and evolve dynamically. This region represents the core of the cluster where physical process and in this case the energy minimization via a relaxation calculation of \ac{LAMMPS} takes place.
 
@@ -70,12 +70,15 @@ This approach is commonly employed in molecular dynamics studies to simulate nan
 	\includegraphics[scale=0.45]{Inhalt/Bilder/lammps_mono_setup.png}
 	\caption{Initial setup for the \ac{LAMMPS} relaxation. Only the inner blue sphere is allowed to relax, forces on the orange atom positions are overridden to 0.}
 	\label{fig:lammpssetup}
-\end{figure}\\
-The centered red dots in \ref{fig:lammpssetup} represent sodium atoms. They represent the initial pre-relaxation positions of sodium inside the dynamic inner sphere. These initial positions are the same for every relaxation step of the simulated annealing. Note that the minimum energy of the pair-potential in \ref{fig:pairpotential} is roughly at $\SI{3.1}{\angstrom}$ which is roughly the nearest neighbour distance 
-\begin{align}
-	R
-\end{align} in the neon \ac{fcc} lattice. We therefore put the second sodium atom in the dimer calculations at the neares neighbour lattice site. 
+\end{figure}\\%TODO split figure into subfigures with exra captions
+The centered red dots in \ref{fig:lammpssetup} represent sodium atoms. They represent the initial pre-relaxation positions of sodium inside the dynamic inner sphere. These initial positions are the same for every relaxation step of the simulated annealing. Note that the minimum energy of the pair-potential in \ref{fig:pairpotential} is roughly at $3\text{.}1\si{\angstrom}$ which is the nearest neighbor distance in the neon \ac{fcc} lattice. With $a = 4\text{.}4637\si{\angstrom}$: 
+%TODO fix unit separator to a dot, onyl comma works for now
+\begin{gather}
+	\vec{a}_1=\begin{bmatrix}a\\0\end{bmatrix} \qquad \vec{a}_2=\begin{bmatrix}0\\a\end{bmatrix}\\
+	\Rightarrow \|\frac{1}{2}\left(\vec{a}_1+\vec{a}_2\right)\|=\frac{1}{\sqrt{2}}\cdot a = 3\text{.}1563\si{\angstrom}.
+\end{gather}  We therefore put the second sodium atom in the dimer calculations at the nearest neighbor lattice site. 
 \section{Sodium Monomer}
+Now the annealing was done as described in the chapters before for a single sodium atom at the center. Since the known energetically minimal configurations for every $S$ and it's corresponding energy was known due to a brute force calculation, this calculation serves as a benchmark for the annealing algorithm. The brute force minimal energies for the vacancies are shown in \ref{fig:simulatedannealingsodium} on the right axis. The left axis shows the relative counts (with respec to the total counts) of one annealing sweep consisting of itself 1000 random removals of neon atoms from the state vector. This annealed approach quickly converges to a statistical distribution shown in the same figure \ref{fig:simulatedannealingsodium} on the left $y$-axis. The pattern surfaces quickly after about 50 sweeps, the total amount of sweeps for the plot were 736. The true local minima at $S=10$ and $S=13$ could be picked up upon quite sharply. At $S=8$ the annealing algorithm seems to pick up on the notch, that is not quite an actual minima but could look like a local minima if approached from many directions in the high dimensional phase space.\\  
 -Not feasible to brute force dimer with 3rd nearest neighbors\\
 -explain nearest neighbors\\
 -even with full 48 cubic point symmetry of the host of the defect which no structure can exceed ...\\ 
@@ -102,10 +105,13 @@ Now first by brute force search we know the minima for a single sodium atom.
 	\label{fig:simulatedannealingsodium}
 \end{figure}  
 
-So \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately icks up on the location of the minima, albeit with no quantitative measure misleading local minima being blown out of proportion (See S=8).
+Since \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately picks up on the location of the minima (albeit with no quantitative measure and misleading local minima being blown out of proportion (See $S=8$)) we try the same approach for the sodium dimer. Here the energetically optimal $S$ replacement will exceed the number of available sites as in the monomer calculation (i.e. up to second nearest neighbor). The sweeps and their random removal of neon atoms now act upon an extended state vector containing every lattice site up to the 3rd nearest neighbor. This is also the very reason a brute force approach is unfeasable, since the volume of phasespace to be explored grows quickly. This is the reason the statistical approach was chosen in the first place. 
+
+
+-brute force lexiciraphically sorting algorithm here
 
 \section{Sodium Dimer}
--in setup exxplain that dimer binding position is roughly first nearest neighbour of  ne lattice
+-in setup exxplain that dimer binding position is roughly first nearest neighbour of  ne lattice\\
 -3rd nearest neighbors, why ? because minima is more the 2 shells
 -rough estimate of time used by brute forcing\\
 -even with full cubic symmetry this is too long (divide b 64)\\
@@ -115,10 +121,10 @@ So \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm ac
 -give structures\\
 -discuss structures (inner shell carved out)\\
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[scale = 0.5]{Inhalt/Bilder/optimal_defect_simulated_annealing_dimer.png}
-	\caption{Simulated annealing results and their relative occurrence after 33 sweeps}
+	\includegraphics[scale = 0.5]{Inhalt/Bilder/optimaldimer.png}
+	\caption{Simulated annealing results and their relative occurrence after x sweeps}
 	\label{fig:simulatedannealingsodiumdimer}
 \end{figure}
 
