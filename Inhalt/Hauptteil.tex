@@ -1,13 +1,13 @@
 
 \chapter{Finding Minima of Neon Replacements}
 \label{chap:Erstes Kapitel}
-\section{Neon interaction LAMMPS setup}
+\section{Pair Potential Interaction}
 \subsection{\ac{HF} equations}
-We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a Hartree Fock self consitent field cycle by variyng the atom distance. Now selfconsitently solving the equations:\\
+We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a \ac{HF} self consistent field cycle by varying the atom distance. Now selfconsistently solving the equations:\\
 \begin{align}
-	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}-\frac{e^2}{4\varepsilon_0}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi_{\mu\sigma}(\vec{r})=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
+	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}-\frac{e^2}{4\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi_{\mu\sigma}(\vec{r})=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
 \end{align}
-with $\hat{A}_{\mu\sigma}$ being the exchange correlation term leads to the eigenenergies $\varepsilon_{\mu\sigma}$ Since \ac{HF} 
+with $\hat{A}_{\mu\sigma}$ being the exchange correlation term leads to the eigenenergies $\varepsilon_{\mu\sigma}$. Since \ac{HF} 
 minimizes a slater determinant, the energies correspond to the factors of the slater product state, meaning the systems energy is the sum of the energy of the single electrons. From that, to get the actual energy of the whole system, one needs to remove inter-electron repulsion and exchange correlation from the sum of all eigenenergies $\varepsilon_{\mu\sigma}$:
 \begin{align}
 	E_{HF}^0 = \sum_{\mu,\sigma}\varepsilon_{\mu\sigma}-\frac{1}{2}\sum_{\substack{\mu,\nu\\\sigma,\sigma'}}^{(\mu\sigma\neq\nu\sigma)}\left[C_{\mu\sigma}^{\nu\sigma'}-A_{\mu\sigma}^{\nu\sigma}\delta_{\sigma\sigma'}\right]
@@ -24,6 +24,8 @@ Since solving the \ac{HF} equations in real space is too costly one restricts th
 \end{align} 
 
 with $\epsilon$ being a diagonal matrix of single particle energies on the diagonal, $\mathbf{S}$ the basis overlap matrix, $\mathbf{C}$ the coefficient matrix and finally $\mathbf{F}$ the Fock operator.
+\subsection{Moeller-Plesset Perturbation}
+-go from pair HF to moller plesset
 \subsection{\ac{BSSE}}
 Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
 approximation to correct for the \ac{BSSE}.
@@ -31,23 +33,48 @@ This is know as the counterpoise‚Äêcorrected interaction energy formula or Boys‚
 \begin{align}
 	E_{\text {int }}^{\text {CP }}(R)=E_{A B}(R)-E_A^{\text {ghost }}(R)-E_B^{\text {ghost }}(R).
 \end{align}
-\subsection{Moeller-Plesset Perturbation}
--go form pair HF to moller plesset
+
 \subsection{Interpolation}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale = 0.7]{Inhalt/Bilder/pairpotential.png}
 	\caption{Plots of interpolations of pair potentials of Ne-Ne, Na-Na, Ne-Na calculated with Moeller Plesset 2 perturabtion theory.}
+	\label{fig:pairpotential}
 \end{figure}
 %TODO Noltig source
 -explain exact interpolation\\
--paper citation\\
+-paper citation where brute force plot shows up as well\\
 -which basisi is being used in the roothaan equations \\
 -explain setup of calculation with ball being carved out\\
 -maybe here explain the nearest neighbours\\
 lammps gets linear interpolation\\
 -since plot is in priniple linearly interpolated this is the exact pair interactins that lammps will read
+\section{Geometric \ac{LAMMPS} Setup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TODO%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The simulation models a finite spherical cluster of atoms extracted from a bulk face-centered cubic lattice. To balance computational efficiency with physical realism, the system is partitioned into two concentric spherical regions defined in units of the lattice constant. The inner spherical region, with radius $n_{inner}$ contains atoms that are free to move and evolve dynamically. This region represents the core of the cluster where physical process and in this case the energy minimization via a relaxation calculation of \ac{LAMMPS} takes place.
+
+Sourrounding this core is an immobilized shell with thickness $n_{outer}$
+Atoms within this outer shell are constrained by setting their forces to zero, effectively fixing them in space. This fixed shell act as a rigid boundary that suppresses surface effects and mimics the presence of a an extended bulk lattice, thereby reducing finite size artifact in the dynamics of the inner region.
+
+Consequently the total cluster is confined within a spherical domain of radius $R_{tot}=(n_{inner}+n_{outer})\cdot a$ with $a$ being the lattice constant of the pure neon \ac{fcc} lattice. 
+
+Technically the simulation is defined as a cubic volume large enough to contain the entire spherical cluster, with half-length at least $R_{tot}$.
+For the relaxation mechanics atomic positions are set according to \ref{fig:lammpssetup} on a perfect \ac{fcc} lattice no matter their role (sodium defect, fixed neon, dynamic neon) as long as they are inside the cutoff radius $R_{tot}$.
+%TODO is it really ? check, cite
+This approach is commonly employed in molecular dynamics studies to simulate nanoparticles or finite clusters embedded in bulk-like surroundings.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TODO%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{Inhalt/Bilder/lammps_dimer_setup.png}
+	\includegraphics[scale=0.45]{Inhalt/Bilder/lammps_mono_setup.png}
+	\caption{Initial setup for the \ac{LAMMPS} relaxation. Only the inner blue sphere is allowed to relax, forces on the orange atom positions are overridden to 0.}
+	\label{fig:lammpssetup}
+\end{figure}\\
+The centered red dots in \ref{fig:lammpssetup} represent sodium atoms. They represent the initial pre-relaxation positions of sodium inside the dynamic inner sphere. These initial positions are the same for every relaxation step of the simulated annealing. Note that the minimum energy of the pair-potential in \ref{fig:pairpotential} is roughly at $\SI{3.1}{\angstrom}$ which is roughly the nearest neighbour distance 
+\begin{align}
+	R
+\end{align} in the neon \ac{fcc} lattice. We therefore put the second sodium atom in the dimer calculations at the neares neighbour lattice site. 
 \section{Sodium Monomer}
 -Not feasible to brute force dimer with 3rd nearest neighbors\\
 -explain nearest neighbors\\
@@ -78,6 +105,7 @@ Now first by brute force search we know the minima for a single sodium atom.
 So \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately icks up on the location of the minima, albeit with no quantitative measure misleading local minima being blown out of proportion (See S=8).
 
 \section{Sodium Dimer}
+-in setup exxplain that dimer binding position is roughly first nearest neighbour of  ne lattice
 -3rd nearest neighbors, why ? because minima is more the 2 shells
 -rough estimate of time used by brute forcing\\
 -even with full cubic symmetry this is too long (divide b 64)\\
