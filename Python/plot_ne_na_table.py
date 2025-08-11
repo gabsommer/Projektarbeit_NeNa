@@ -37,7 +37,7 @@ if current_block is not None and data_x:
 fig, ax = plt.subplots(figsize=(8,5))
 ax.set_xlabel("Interatomic Distance [Å]")
 ax.set_ylabel("Energy [eV]")
-ax.set_title("Pairpotential")
+ax.set_title("MP2 Pairpotentials using [aug-cc-pVQZ]")
 ax.grid(True)
 ax.set_xlim(1,15)
 ax.set_ylim(-1,1)

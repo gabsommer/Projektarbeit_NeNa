@@ -73,3 +73,20 @@ else:
     plt.savefig("./lammps_setup.png")
 
 
+# Constants
+seconds_in_year = 365 * 24 * 60 * 60  # 31,536,000 seconds
+
+# Calculate 2^42
+two_pow_42 = 2 ** 42
+
+# Calculate the expression: (2^42 * 20) / 48 seconds
+total_seconds = (two_pow_42 * 20) / 48
+
+# Convert seconds to years
+total_years = total_seconds / seconds_in_year
+
+print(f"Total seconds: {total_seconds:.2e} s")
+print(f"Total years: {total_years:.2e} years")
+print(f"Total years (approx): {total_years:.0f} years")
+
+

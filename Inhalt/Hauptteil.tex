@@ -29,13 +29,13 @@ with $\epsilon$ being a diagonal matrix of single particle energies on the diago
 MÃ¸ller-Plesset Perturbation theory extends the idea of \ac{HF}. We consider the actual true Hamiltonian  $\hat{H}$ in the same basis as \ref{eq:roothaan} and define the difference to the Fock operator to be a relatively small perturbation:
 \begin{align}
 	\hat{H}= \hat{F} + \underbrace{\left(\hat{H}-\hat{F}\right)}_{\hat{V}_{pert}}.
-\end{align}
-Now the $0$-th order terms of the perturbation are
+\end{align} THe $0$-th order Term is just the sum of the eigenvalues $\varepsilon_i$ of the Fock Problem.
+Now the $1$st order terms of the perturbation are
 \begin{align}
 	E^{(1)}&=\bra{\Psi_{HF}}\left(\hat{H}-\hat{F}\right)\ket{\Psi_{HF}}=\\
 	&=-\frac{1}{2}\sum_{\mu\nu}\left[\bra{\varphi_{\mu}\varphi_{\nu}}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\varphi_{\mu}\varphi_{\nu}}-\bra{\varphi_{\mu}\varphi_{\nu}}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\varphi_{\nu}\varphi_{\mu}}\right].
 \end{align} 
-which is exactly the mean-field and the exchange correlation term in the \ac{HF} Ansatz. To go beyond \ac{HF} we need to consider \ac{MP2}:
+which is exactly the mean-field and the exchange correlation term in the \ac{HF} Ansatz, so to go beyond \ac{HF} we need to consider \ac{MP2}:
 \begin{align}
 	E^{(2)}=\sum_{\substack{N<a<b \\ \mu<\nu \leq N}} \frac{\left|\bra{\psi_0}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\psi_{\mu\nu}^{a b}}\right|^ 2}{\left(\varepsilon_a+\varepsilon_b\right)-\left(\varepsilon_\mu+\varepsilon_\nu\right)} .
 \end{align} where $\ket{\psi_{\mu\nu}^{a b}}$ is an excited Slater determinant, where single orbitals $\mu, \nu$ are removed and replaced by single orbitals $a,b$ in the slater determinant. $\varepsilon_i$ are eigenvalues of the slater single particle factors of the \ac{HF} problem.
@@ -46,6 +46,7 @@ This is know as the counterpoiseâ€corrected interaction energy formula or Boysâ
 \begin{align}
 	E_{\text {int}}^{\text {CP}}(R)=E_{A B}(R)-E_A^{\text {ghost}}(R)-E_B^{\text {ghost}}(R).
 \end{align}
+Here $E_{A B}(R)$ is the energy after \ac{MP2} and $E_A^{\text {ghost}}(R),E_B^{\text {ghost}}(R)$ refer to the same calculation results, just with one atom removed completely.
 \subsection{Interpolation}
 
 \begin{figure}[h!]
@@ -57,7 +58,7 @@ This is know as the counterpoiseâ€corrected interaction energy formula or Boysâ
 %TODO Noltig source
 -explain exact interpolation\\
 -paper citation where brute force plot shows up as well\\
--which basisi is being used in the roothaan equations \\
+-which basis is being used in the roothaan equations \\
 -explain setup of calculation with ball being carved out\\
 -maybe here explain the nearest neighbours\\
 lammps gets linear interpolation\\
@@ -88,13 +89,10 @@ The centered red dots in \ref{fig:lammpssetup} represent sodium atoms. They repr
 \begin{gather}
 	\vec{a}_1=\begin{bmatrix}a\\0\end{bmatrix} \qquad \vec{a}_2=\begin{bmatrix}0\\a\end{bmatrix}\\
 	\Rightarrow \|\frac{1}{2}\left(\vec{a}_1+\vec{a}_2\right)\|=\frac{1}{\sqrt{2}}\cdot a = 3\text{.}1563\si{\angstrom}.
-\end{gather}  We therefore put the second sodium atom in the dimer calculations at the nearest neighbor lattice site. 
+\end{gather}  We therefore put the second sodium atom in the dimer calculations at the nearest neighbor lattice site and Set th initial removal $S$ to $S=2$. 
 \section{Sodium Monomer}
 Now the annealing was done as described in the chapters before for a single sodium atom at the center. Since the known energetically minimal configurations for every $S$ and it's corresponding energy was known due to a brute force calculation, this calculation serves as a benchmark for the annealing algorithm. The brute force minimal energies for the vacancies are shown in \ref{fig:simulatedannealingsodium} on the right axis. The left axis shows the relative counts (with respec to the total counts) of one annealing sweep consisting of itself 1000 random removals of neon atoms from the state vector. This annealed approach quickly converges to a statistical distribution shown in the same figure \ref{fig:simulatedannealingsodium} on the left $y$-axis. The pattern surfaces quickly after about 50 sweeps, the total amount of sweeps for the plot were 736. The true local minima at $S=10$ and $S=13$ could be picked up upon quite sharply. At $S=8$ the annealing algorithm seems to pick up on the notch, that is not quite an actual minima but could look like a local minima if approached from many directions in the high dimensional phase space.\\  
--Not feasible to brute force dimer with 3rd nearest neighbors\\
--explain nearest neighbors\\
--even with full 48 cubic point symmetry of the host of the defect which no structure can exceed ...\\ 
--explain confirmation of algorithm with brute force for mono sodium\\
+
 -explain how plot is created with sweeps\\
 -more complicated symmetries\\
 -compare figures\\
@@ -117,18 +115,14 @@ Now first by brute force search we know the minima for a single sodium atom.
 	\label{fig:simulatedannealingsodium}
 \end{figure}  
 
-Since \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately picks up on the location of the minima (albeit with no quantitative measure and misleading local minima being blown out of proportion (See $S=8$)) we try the same approach for the sodium dimer. Here the energetically optimal $S$ replacement will exceed the number of available sites as in the monomer calculation (i.e. up to second nearest neighbor). The sweeps and their random removal of neon atoms now act upon an extended state vector containing every lattice site up to the 3rd nearest neighbor. This is also the very reason a brute force approach is unfeasable, since the volume of phasespace to be explored grows quickly. This is the reason the statistical approach was chosen in the first place. 
 
 
 -brute force lexiciraphically sorting algorithm here
 
 \section{Sodium Dimer}
--in setup exxplain that dimer binding position is roughly first nearest neighbour of  ne lattice\\
--3rd nearest neighbors, why ? because minima is more the 2 shells
--rough estimate of time used by brute forcing\\
--even with full cubic symmetry this is too long (divide b 64)\\
--maybe think about symmetry\\
--same graphics as for the monomer case\\
+Since \ref{fig:simulatedannealingsodium} shows the simulated annealing algorithm accurately picks up on the location of the minima (albeit with no quantitative measure and misleading local minima being blown out of proportion (See $S=8$)) we try the same approach for the sodium dimer. Here the energetically optimal $S$ replacement will expectantly going to exceed the number of available sites as in the monomer calculation (i.e. up to second nearest neighbor). The sweeps and their random removal of neon atoms now act upon an extended state vector containing every lattice site up to the 3rd nearest neighbor. This is also the very reason a brute force approach is unfeasible, since the volume of phase space to be explored grows quickly. Considering the octahedral symmetry $O_h$ of the host, which the defect cannot possibly exceed and roughly estimating one minimization run to take about $20\si{\second}$, we get $\frac{2^{42}}{48}\cdot20s\approx10^{12}s$ which exceeds realistic rescources for a brute force attack. This is the reason the statistical approach was chosen in the first place. 
+
+- symmetry\\
 -heuristically take the maxima of these plots \\
 -give structures\\
 -discuss structures (inner shell carved out)\\
