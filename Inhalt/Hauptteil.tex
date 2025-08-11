@@ -3,7 +3,7 @@
 \label{chap:Erstes Kapitel}
 \section{Pair Potential Interaction}
 \subsection{\ac{HF} equations}
-We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a \ac{HF} self consistent field cycle by varying the atom distance. Now selfconsistently solving the equations:\\
+We start with the pair potentials of Ne-Ne, Ne-Na and Na-Na to mimic the interaction of long distance van der Vaals + short distance repulsion forces. The pair potentials have been calculated using a \ac{HF} self consistent field cycle with \ac{MP2} by varying the atom distance. Now selfconsistently solving the equations:\\
 \begin{align}
 	\left[-\frac{\hbar^2}{2m}\vec{\nabla}^2-\frac{Ze^2}{4\pi\varepsilon_0}-\frac{e^2}{4\varepsilon_0}\sum_{\nu,\sigma}^{(\mu\sigma)\neq(\nu\sigma)}\iiint_{\mathbb{R}^3}\frac{\varphi_{\nu\sigma'}(\tilde{\vec{r}})}{\|\vec{r}-\tilde{\vec{r}}\|}\mathrm{d}^3\tilde{\vec{r}}-\hat{A}_{\mu\sigma}(\vec{r})\right]\varphi_{\mu\sigma}(\vec{r})=\varepsilon_{\mu\sigma}\varphi_{\mu\sigma}(\vec{r}),
 \end{align}
@@ -18,14 +18,27 @@ with $C_{\mu\sigma}^{\nu\sigma'},A_{\mu\sigma}^{\nu\sigma}$ being defined as:
 	\\
 	A_{\mu \sigma}^{v \sigma}&=\frac{e^2}{4 \pi \varepsilon_0} \iint \frac{\varphi_{\mu \sigma}^*(r) \varphi_{v \sigma}^*\left(r^{\prime}\right) \varphi_{\mu \sigma}\left(r^{\prime}\right) \varphi_{v \sigma}(r)}{\left|r-r^{\prime}\right|} \mathrm{~d}^3 r \mathrm{~d}^3 r^{\prime}.
 \end{align}
-Since solving the \ac{HF} equations in real space is too costly one restricts the variations to coefficients of a superposition of fixed basisvectors. These lead to the Roothaan-Hall equations, which are a discrete Matrix representation of the \ac{HF} equations:
+Since solving the \ac{HF} equations in real space is too costly one restricts the variations to coefficients of a superposition of fixed basis vectors. These lead to the Roothaan-Hall equations, which are a discrete Matrix representation of the \ac{HF} equations:
 \begin{align}
 	\mathbf{F C}=\mathbf{S C} \epsilon,
+	\label{eq:roothaan}
 \end{align} 
 
 with $\epsilon$ being a diagonal matrix of single particle energies on the diagonal, $\mathbf{S}$ the basis overlap matrix, $\mathbf{C}$ the coefficient matrix and finally $\mathbf{F}$ the Fock operator.
-\subsection{Moeller-Plesset Perturbation}
--go from pair HF to moller plesset
+\subsection{Møller-Plesset Perturbation}
+Møller-Plesset Perturbation theory extends the idea of \ac{HF}. We consider the actual true Hamiltonian  $\hat{H}$ in the same basis as \ref{eq:roothaan} and define the difference to the Fock operator to be a relatively small perturbation:
+\begin{align}
+	\hat{H}= \hat{F} + \underbrace{\left(\hat{H}-\hat{F}\right)}_{\hat{V}_{pert}}.
+\end{align}
+Now the $0$-th order terms of the perturbation are
+\begin{align}
+	E^{(1)}&=\bra{\Psi_{HF}}\left(\hat{H}-\hat{F}\right)\ket{\Psi_{HF}}=\\
+	&=-\frac{1}{2}\sum_{\mu\nu}\left[\bra{\varphi_{\mu}\varphi_{\nu}}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\varphi_{\mu}\varphi_{\nu}}-\bra{\varphi_{\mu}\varphi_{\nu}}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\varphi_{\nu}\varphi_{\mu}}\right].
+\end{align} 
+which is exactly the mean-field and the exchange correlation term in the \ac{HF} Ansatz. To go beyond \ac{HF} we need to consider \ac{MP2}:
+\begin{align}
+	E^{(2)}=\sum_{\substack{N<a<b \\ \mu<\nu \leq N}} \frac{\left|\bra{\psi_0}\hat{V}^{(2)}(\hat{\vec{r}}_\mu,\hat{\vec{r}}_\nu)\ket{\psi_{\mu\nu}^{a b}}\right|^ 2}{\left(\varepsilon_a+\varepsilon_b\right)-\left(\varepsilon_\mu+\varepsilon_\nu\right)} .
+\end{align} where $\ket{\psi_{\mu\nu}^{a b}}$ is an excited Slater determinant, where single orbitals $\mu, \nu$ are removed and replaced by single orbitals $a,b$ in the slater determinant. $\varepsilon_i$ are eigenvalues of the slater single particle factors of the \ac{HF} problem.
 \subsection{\ac{BSSE}}
 Now the the superpositions of a fixed basis leads to the \ac{BSSE}. These errors are being corrected for by using 'ghost calculations', essentially the same calculation with one atom being removed (i.e. the extended two atom centered basis stays the same). This means the basis will have access to the second electron states, but the nucleus and additional electrons are not accounted for. These 'ghost energies' will then subsequently be removed from the \ac{HF}
 approximation to correct for the \ac{BSSE}.
@@ -33,7 +46,6 @@ This is know as the counterpoise‐corrected interaction energy formula or Boys�
 \begin{align}
 	E_{\text {int}}^{\text {CP}}(R)=E_{A B}(R)-E_A^{\text {ghost}}(R)-E_B^{\text {ghost}}(R).
 \end{align}
-
 \subsection{Interpolation}
 
 \begin{figure}[h!]
