@@ -20,7 +20,7 @@ Since we know that the momenta $\vec{\mathbf{p}}$ only show up in the kinetic te
 	\caption{state evolution $(\vec{\mathbf{q}}(t),\vec{\mathbf{p}}(t))$ through 6N-dimensional phase space}
 	\label{fig:phasepsace}
 \end{figure}
-Now for the problem at hand we will switch to the grand canonical sum, since wee need to introduce two more degrees of freedom, i.e. the particle exchange with the heat and particle bath, which here in general involves two types of particles numbers $N_1,N_2$. They naturally introduce only discrete degrees of freedom so we can quickly write the grand canonical distribution for the system:
+Now for the problem at hand we will switch to the grand canonical sum, since we need to introduce two more degrees of freedom, i.e. the particle exchange with the heat and particle bath, which here in general involves two types of particles numbers $N_1,N_2$. They naturally introduce only discrete degrees of freedom so we can quickly write the grand canonical distribution for the system:
 \begin{align}
 	\rho(N_1,N_2,\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\frac{1}{h^{3N}\prod_{j=1}^{2}N_j!}\sum_{N_1}\sum_{N_2}\sum_{n}\left[H_{N_1N_2}(\vec{\mathbf{q}}_{0n},\vec{\mathbf{p}}_{0n})-\sum_{i=1}^{2}\mu_i N_i\right]}=\\
 	&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\Xi_{\mu_1\mu_2}(T,V)},
@@ -29,7 +29,7 @@ with
 \begin{align}
 \mu_i = -T \frac{\partial S}{\partial N_i}=\frac{\partial E}{\partial N_i}.
 \end{align} the $i$-th chemical potential.
-The most probable states $(N_1,N_2,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$ in the grand canonical distribution are the ones for which the term $F = H_{N_1N_2}(\vec{\mathbf{q}},\vec{\mathbf{p}})-\sum_{i=1}^{2}\mu_i N_i$ is minimal. We here in this work call $F$ the formation energy. In the following chapters we will fix the number of sodium atoms $N_2$. The term $\mu_2 N_2$ (because of the exponential), just factors out, giving us the conditional probability:
+The most probable states $(N_1,N_2,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$\footnote{We from now on drop the superscript $(\vec{\mathbf{q}}_{0}^{[0]},\vec{\mathbf{p}}_{i}^{[0]}) \rightarrow (\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$.} in the grand canonical distribution are the ones for which the term $F = H_{N_1N_2}(\vec{\mathbf{q}}_i,\vec{\mathbf{p}}_i)-\sum_{i=1}^{2}\mu_i N_i$ is minimal. We here in this work call $F$ the formation energy. In the following chapters we will fix the number of sodium atoms $N_2$. The term $\mu_2 N_2$ (because of the exponential), just factors out, giving us the conditional probability:
 \begin{align}
 	\rho(N_2 | N_1,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})-\mu_1 N_1\right)}}{\Xi_{\mu_1\mu_2}(T,V)}
 \end{align}
@@ -40,12 +40,23 @@ leading us to the effective quantity that will be minimized in the following cha
 \begin{align}
 	F_m(N_1,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - \mu_1 N_1
 \end{align}
-Now we start with an initial number of neon atoms $N_{10}$ determined in the simulation setup, then remove atoms. The number of removals is denoted as $S$. We rewrite the formation energy with $N_1 = N_{10}-S$ and get:
+Now we start with an initial number of neon atoms $N_{1}^{[0]}$ determined in the simulation setup, then remove atoms $S$ from $N_{1}^{[0]}$. The number of removals is denoted as $S$. We rewrite the formation energy with $N_1 = N_{1}^{[0]}-S$ and get:
 \begin{align}
-	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - \mu_1 (N_{10}-S).
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - \mu_1 (N_{1}^{[0]}-S).
 \end{align}
+The constant term $-\mu_1 N_1^{[0]}$ drops obviously when minimizing, leading us further to
+\begin{align}
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) + \mu_1 S.
+\end{align}
+The chemical potential $\mu_1$ is the change in energy when adding one atom, or vice versa the change in energy of the whole system when removing one atom, i.e.\footnote{$S$ here is not to be confused with the Entropy.}:
+\begin{align}
+	\mu_1 =\frac{\partial E}{\partial N_1} = - \frac{\partial E}{\partial S} 
+\end{align} which we identify as the negative cohesive energy $-E_{\text{coh}}$, so negative the energy that is rtequired to remove on atom from the lattice.
 
-Explanation for cohesive energy
+We remember that we are in the grand canoncial ensemble, so removing one atom from the microscoping system means adding it to the heat and particle bath. This is intuitive, beacuse when we look at the crystal, removing one atom to create a vacancy essentially means we are placing it some other part of the crystal, that acts as a heatbath, we do not send it to the gasphase, so we must add second chemical term in $F_m(S,\vec{\mathbf{q}}_i)$, or remove $S$ times the cohesive energy $E_{\text{coh}}$. The final form of the formation energy thus is:
+\begin{align}
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - E_{\text{coh}} S.	
+\end{align}It is the formula that is used in literature. %TODO CITATION
 \section{The explicit Formation Energy F}
 Now we can write out the Hamiltonian, that only includes the pair interaction of neon and sodium (kinetic energy already being set to zero, or alternatively being ignored).
 \section{Relaxation in LAMMPS}
