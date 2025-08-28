@@ -1,17 +1,17 @@
 \chapter{Theory}
 \label{chap:Theory}
 %
-\section{From Statistical Mechanics to Vacancy configuration} In later chapters only discrete configurations of the system at hand will be examined. Going form a continuos picture of classical phase space to a descrete description is straight forward.First we consider the system of the crystal of Neon Atoms as a canonical ensemble, this means it will be described under the assumption of an infinitely large heat bath by Boltzmann statistics. The probability distribution of members of the ensemble will then be 
+\section{From Statistical Mechanics to Vacancy Configuration} In later chapters only discrete configurations of the system at hand will be examined. Going form a continuous picture of classical phase space to a discrete description is straight forward.First we consider the system of the crystal of Neon Atoms as a canonical ensemble, this means it will be described under the assumption of an infinitely large heat bath by Boltzmann statistics. The probability distribution of members of the ensemble will then be 
 \begin{align}
-	p(\vec{\mathbf{q}},\vec{\mathbf{p}})=\frac{e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}}{\int\cdots\int e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}\mathrm{d}^{3N}\vec{\mathbf{q}}\mathrm{d}^{3N}\vec{\mathbf{p}}},
+	\rho(\vec{\mathbf{q}},\vec{\mathbf{p}})=\frac{e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}}{\int\cdots\int e^{-\beta H(\vec{\mathbf{q}},\vec{\mathbf{p}})}\mathrm{d}^{3N}\vec{\mathbf{q}}\mathrm{d}^{3N}\vec{\mathbf{p}}},
 \end{align}
-with $N$ being the number total of particles of the system.\\\\
+with $N$ being the number total of particles of the system.\\
 Now an ensemble is to be understood as many fictional copies of the same system representing the states that a system will explore when propagating in time according to Hamilton's equation of motion. The ensemble distribution represents the relative number of times that an ergodic system will come by a given state after an infinite amount of time has passed. Now for a crystal in principle this still holds. At low temperatures though the phase space that is being explored can be abstracted in such cases. The reason is that the system will for a given finite time usually explore only nearby points in the phase space. This is the crystal configuration but allowing for dynamics such as lattice vibrations and thermal movement of the atoms with respect to their lattice site. So for a given initial point in phase space the system will mostly explore its proximity until it probabilistically jumps to another volume of phase space whose proximity then will be explored for some further time. Now this means the systems lattice configuration has changed which at low but non zero temperature should be reasonable. 
-We now consider these volumes of phase space (being approximately confined regions, i.e. configurations of e.g. a crystalline structure) to be discrete states that the system can be in. So our canonical distribution now is a discrete one, each state representing such a configuration volume. What's left is to figure out what state of the still continuously possible states inside will be used to represent each configuration. We in this work will use the state $(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})$ that locally minimizes $H(\vec{\mathbf{q}},\vec{\mathbf{p}})$. The Boltzmann distribution now follows to be discrete:
+We now consider these volumes of phase space (being approximately confined regions, i.e. configurations of e.g. a crystalline structure) to be discrete states that the system can be in. So our canonical distribution now is a discrete one, each state representing such a configuration volume. What's left is to figure out what state of the still continuously possible states inside will be used to represent each configuration. We in this work will use the state $(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})$ that locally minimizes $H(\vec{\mathbf{q}},\vec{\mathbf{p}})$. The Boltzmann distribution now follows to be discrete:
 \begin{align}
-	p(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})=\frac{e^{-\beta H(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})}}{\sum_{n} e^{-\beta H(\vec{\mathbf{q}}_{0n},\vec{\mathbf{p}}_{0n})}}.
+	\rho(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})=\frac{e^{-\beta H(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})}}{\sum_{n} e^{-\beta H(\vec{\mathbf{q}}_{n}^{[0]},\vec{\mathbf{p}}_{n}^{[0]})}}.
 \end{align}
-Since we know that the momenta $\vec{\mathbf{p}}$ only show up in the kinetic term of the Hamiltonian, we can immediately say that the momenta $\vec{\mathbf{p}}_{0i}$ representing the minimal hamiltonian will be 0 for all possible configurations $(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})$, so we could just drop the $\vec{\mathbf{p}}$ dependency from here on, but for now we'll continue to write them for completeness and only later on will remember this argument.
+Since we know that the momenta $\vec{\mathbf{p}}$ only show up in the kinetic term of the Hamiltonian, we can immediately say that the momenta $\vec{\mathbf{p}}_{i}^{[0]}$ representing the minimal hamiltonian will be 0 for all possible configurations $(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})$, so we could just drop the $\vec{\mathbf{p}}$ dependency from here on, but for now we'll continue to write them for completeness and only later on will remember this argument.
 
 \begin{figure}
 	\centering
@@ -20,45 +20,49 @@ Since we know that the momenta $\vec{\mathbf{p}}$ only show up in the kinetic te
 	\caption{state evolution $(\vec{\mathbf{q}}(t),\vec{\mathbf{p}}(t))$ through 6N-dimensional phase space}
 	\label{fig:phasepsace}
 \end{figure}
-Now for the problem at hand we will switch to the grand canonical sum, since we need to introduce two more degrees of freedom, i.e. the particle exchange with the heat and particle bath, which here in general involves two types of particles numbers $N_1,N_2$. They naturally introduce only discrete degrees of freedom so we can quickly write the grand canonical distribution for the system:
+For the problem at hand we will switch to the grand canonical sum, since we need to introduce two more degrees of freedom, i.e. the particle exchange with the heat and particle bath, which here in general involves two types of particles numbers $N_1,N_2$. They naturally introduce only discrete degrees of freedom so we can quickly write the grand canonical distribution for the system:
 \begin{align}
-	\rho(N_1,N_2,\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\frac{1}{h^{3N}\prod_{j=1}^{2}N_j!}\sum_{N_1}\sum_{N_2}\sum_{n}\left[H_{N_1N_2}(\vec{\mathbf{q}}_{0n},\vec{\mathbf{p}}_{0n})-\sum_{i=1}^{2}\mu_i N_i\right]}=\\
-	&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{0i},\vec{\mathbf{p}}_{0i})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\Xi_{\mu_1\mu_2}(T,V)},
+	\rho(N_1,N_2,\vec{\mathbf{q}}_{0}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\frac{1}{h^{3N}\prod_{j=1}^{2}N_j!}\sum_{N_1}\sum_{N_2}\sum_{n}\left[H_{N_1N_2}(\vec{\mathbf{q}}_{n}^{[0]},\vec{\mathbf{p}}_{n}^{[0]})-\sum_{i=1}^{2}\mu_i N_i\right]}=\\
+	&=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]})-\sum_{i=1}^{2}\mu_i N_i\right)}}{\Xi_{\mu_1\mu_2}(T,V)},
 \end{align}
 with 
 \begin{align}
-\mu_i = -T \frac{\partial S}{\partial N_i}=\frac{\partial E}{\partial N_i}.
+\mu_i = T \frac{\partial S}{\partial N_i}=\frac{\partial E}{\partial N_i}.
 \end{align} the $i$-th chemical potential.
-The most probable states $(N_1,N_2,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$\footnote{We from now on drop the superscript $(\vec{\mathbf{q}}_{0}^{[0]},\vec{\mathbf{p}}_{i}^{[0]}) \rightarrow (\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$.} in the grand canonical distribution are the ones for which the term $F = H_{N_1N_2}(\vec{\mathbf{q}}_i,\vec{\mathbf{p}}_i)-\sum_{i=1}^{2}\mu_i N_i$ is minimal. We here in this work call $F$ the formation energy. In the following chapters we will fix the number of sodium atoms $N_2$. The term $\mu_2 N_2$ (because of the exponential), just factors out, giving us the conditional probability:
+The most probable states $(N_1,N_2,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$\footnote{We from now on drop the superscript $(\vec{\mathbf{q}}_{i}^{[0]},\vec{\mathbf{p}}_{i}^{[0]}) \rightarrow (\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$.} in the grand canonical distribution are the ones for which the term $F = H_{N_1N_2}(\vec{\mathbf{q}}_i,\vec{\mathbf{p}}_i)-\sum_{i=1}^{2}\mu_i N_i$ is minimal. We here in this work call $F$ the formation energy. In the following chapters we will fix the number of sodium atoms $N_2$ to be $m$. The term $\mu_2 N_2$ (because of the exponential), just factors out, giving us the conditional probability:
 \begin{align}
-	\rho(N_2 | N_1,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})-\mu_1 N_1\right)}}{\Xi_{\mu_1\mu_2}(T,V)}
+	\rho(N_1,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i}|N_2)=\frac{e^{-\beta\left(H_{N_1N_2}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})-\mu_1 N_1\right)}}{\Xi_{\mu_1\mu_2}(T,V)}
 \end{align}
 leading us to the effective quantity that will be minimized in the following chapters:
 \begin{align}
-	F_m(N_1,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i}) - \mu_1 N_1
-\end{align}for $m$, being a fixed sodium insertion, so $m\in\{1,2\}$. We remember that we already figured out that the minimum of that term needs to have the momenta $\vec{\mathbf{p}}_i$ set to zero, since they only contribute the positive kinetic terms to $H_{mN_1}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$ meaning we can just set them to zero and drop the dependency, finally leading us to the final form of the formation energy:
+	F_m(N_1,\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i}) = H_{N_1m}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i}) - \mu_1 N_1
+\end{align}for $m$, being a fixed sodium insertion, so $m\in\{1,2\}$. We remember that we already figured out that the minimum of that term needs to have the momenta $\vec{\mathbf{p}}_i$ set to zero, since they only contribute the positive kinetic terms to $H_{N_1m}(\vec{\mathbf{q}}_{i},\vec{\mathbf{p}}_{i})$ meaning we can just set them to zero and drop the dependency, finally leading us to the final form of the formation energy:
 \begin{align}
-	F_m(N_1,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - \mu_1 N_1
+	F_m(N_1,\vec{\mathbf{q}}_{i}) = H_{N_1m}(\vec{\mathbf{q}}_{i}) - \mu_1 N_1
 \end{align}
-Now we start with an initial number of neon atoms $N_{1}^{[0]}$ determined in the simulation setup, then remove atoms $S$ from $N_{1}^{[0]}$. The number of removals is denoted as $S$. We rewrite the formation energy with $N_1 = N_{1}^{[0]}-S$ and get:
+The formula can still be rewritten though to make it more practical. We start with an initial number of neon atoms $N_{1}^{[0]}$ determined in the simulation setup, then remove atoms from $N_{1}^{[0]}$. The number of removals is denoted as $S$. We rewrite the formation energy with $N_1 = N_{1}^{[0]}-S$ and get:
 \begin{align}
-	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - \mu_1 (N_{1}^{[0]}-S).
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mS}(\vec{\mathbf{q}}_{i}) - \mu_1 (N_{1}^{[0]}-S).
 \end{align}
 The constant term $-\mu_1 N_1^{[0]}$ drops obviously when minimizing, leading us further to
 \begin{align}
-	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) + \mu_1 S.
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{N_1m}(\vec{\mathbf{q}}_{i}) + \mu_1 S.
 \end{align}
-The chemical potential $\mu_1$ is the change in energy when adding one atom, or vice versa the change in energy of the whole system when removing one atom, i.e.\footnote{$S$ here is not to be confused with the Entropy.}:
+The chemical potential $\mu_1$ is the change in energy when adding one atom, or vice versa the negative change in energy of the whole system when removing one atom, i.e.\footnote{$S$ here is not to be confused with Entropy.}:
 \begin{align}
 	\mu_1 =\frac{\partial E}{\partial N_1} = - \frac{\partial E}{\partial S} 
-\end{align} which we identify as the negative cohesive energy $-E_{\text{coh}}$, so negative the energy that is rtequired to remove on atom from the lattice.
+\end{align} which we identify as the negative cohesive energy $-E_{\text{coh}}$, so minus the energy that is required to remove on atom from the lattice.
 
-We remember that we are in the grand canoncial ensemble, so removing one atom from the microscoping system means adding it to the heat and particle bath. This is intuitive, beacuse when we look at the crystal, removing one atom to create a vacancy essentially means we are placing it some other part of the crystal, that acts as a heatbath, we do not send it to the gasphase, so we must add second chemical term in $F_m(S,\vec{\mathbf{q}}_i)$, or remove $S$ times the cohesive energy $E_{\text{coh}}$. The final form of the formation energy thus is:
+We remember that we are in the grand canoncial ensemble, so removing one atom from the microscoping system means adding it to the heat and particle bath. This is intuitive, beacuse when we look at the crystal, removing one atom to create a vacancy essentially means we are placing it at some other part of the crystal, that acts as a particle bath. Setting $\mu_i$ to zero is equivalent to sending it to the gas phase, so we must add the second chemical term in $F_m(S,\vec{\mathbf{q}}_i)$, or in other words remove $S$ times the cohesive energy $E_{\text{coh}}$ to account for that. The final form of the formation energy thus is:
 \begin{align}
-	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mN_1}(\vec{\mathbf{q}}_{i}) - E_{\text{coh}} S.	
+	F_m(S,\vec{\mathbf{q}}_{i}) = H_{mS}(\vec{\mathbf{q}}_{i}) - E_{\text{coh}} S.	
 \end{align}It is the formula that is used in literature. %TODO CITATION
 \section{The explicit Formation Energy F}
-Now we can write out the Hamiltonian, that only includes the pair interaction of neon and sodium (kinetic energy already being set to zero, or alternatively being ignored).
+Now we can write out explicitly the Hamiltonian, that only includes the pair interaction of neon and sodium (kinetic energy already is being set to zero).\begin{align}
+	F_m(S,\vec{\mathbf{q}}_{i}) &= H_{mS}(\vec{\mathbf{q}}_{i}) - E_{\text{coh}} S=\\
+	&=\frac{1}{2}\sum_{j=1}^{N_1^{[0]}-S}\sum_{\substack{i=1\\i\neq j}}^{N_1^{[0]}-S} V_{\text{Ne-Ne}}(\|\vec{\mathbf{r}}_i^{\,[\text{Ne}]}-\vec{\mathbf{r}}_j^{\,[\text{Ne}]}\|)+
+	\frac{1}{2}\sum_{j=1}^{m}\sum_{\substack{i=1\\i\neq j}}^{m} V_{\text{Na-Na}}(\|\vec{\mathbf{r}}_i^{\,[\text{Na}]}-\vec{\mathbf{r}}_j^{\,[\text{Na}]}\|)+
+\end{align}
 \section{Relaxation in LAMMPS}
 relaxation theory form lammps 
 described in \cite{Bitzek2006} Bitzek, Koskinen, Gahler, Moseler, Gumbsch, Phys Rev Lett, 97, 170201 (2006).
