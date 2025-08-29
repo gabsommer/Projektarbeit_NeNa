@@ -60,9 +60,10 @@ We remember that we are in the grand canoncial ensemble, so removing one atom fr
 \section{The explicit Formation Energy F}
 Now we can write out explicitly the Hamiltonian, that only includes the pair interaction of neon and sodium (kinetic energy already is being set to zero).\begin{align}
 	F_m(S,\vec{\mathbf{q}}_{i}) &= H_{mS}(\vec{\mathbf{q}}_{i}) - E_{\text{coh}} S=\\
-	&=\frac{1}{2}\sum_{j=1}^{N_1^{[0]}-S}\sum_{\substack{i=1\\i\neq j}}^{N_1^{[0]}-S} V_{\text{Ne-Ne}}(\|\vec{\mathbf{r}}_i^{\,[\text{Ne}]}-\vec{\mathbf{r}}_j^{\,[\text{Ne}]}\|)+
-	\frac{1}{2}\sum_{j=1}^{m}\sum_{\substack{i=1\\i\neq j}}^{m} V_{\text{Na-Na}}(\|\vec{\mathbf{r}}_i^{\,[\text{Na}]}-\vec{\mathbf{r}}_j^{\,[\text{Na}]}\|)+
+	&=\frac{1}{2}\sum_{\alpha=1}^{N_1}\sum_{\substack{\beta=1\\\alpha\neq \beta}}^{N_1} V_{\text{Ne-Ne}}(\|\vec{\mathbf{r}}_\alpha^{\,[\text{Ne}]_i}-\vec{\mathbf{r}}_\beta^{\,[\text{Ne}]_i}\|)+\\&+
+	\frac{1}{2}\sum_{\alpha=1}^{m}\sum_{\substack{\beta=1\\\beta\neq \alpha}}^{m} V_{\text{Na-Na}}(\|\vec{\mathbf{r}}_\alpha^{\,[\text{Na}]_i}-\vec{\mathbf{r}}_\beta^{\,[\text{Na}]_i}\|)+\\&\;+\sum_{\alpha=1}^{N_1}\sum_{\beta=1}^{m}V_{\text{Ne-Na}}(\|\vec{\mathbf{r}}_\alpha^{\,[\text{Ne}]_i}-\vec{\mathbf{r}}_\beta^{\,[\text{Na}]_i}\|)-E_\text{coh}S.
 \end{align}
+The potentials $V_\text{Ne-Ne},V_\text{Na-Na},V_\text{Ne-Na}$ are the respective pairpotentials and thus purely radial.
 \section{Relaxation in LAMMPS}
 relaxation theory form lammps 
 described in \cite{Bitzek2006} Bitzek, Koskinen, Gahler, Moseler, Gumbsch, Phys Rev Lett, 97, 170201 (2006).
